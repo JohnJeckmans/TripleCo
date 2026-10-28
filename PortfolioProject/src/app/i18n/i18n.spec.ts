@@ -19,7 +19,7 @@ describe('I18n', () => {
     TestBed.resetTestingModule();
     const nextVisit = TestBed.inject(I18n);
     expect(nextVisit.lang()).toBe('de');
-    expect(nextVisit.t().home.title).toBe('Willkommen bei TripleCo');
+    expect(nextVisit.t().hero.focus).toBe('Strategie, Transformation & Wachstum');
   });
 
   it('ignores an unknown stored language', () => {

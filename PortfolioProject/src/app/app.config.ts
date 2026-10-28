@@ -15,7 +15,7 @@ import {
   faLinkedin,
   faXTwitter,
 } from '@fortawesome/free-brands-svg-icons';
-import { faCircle } from '@fortawesome/free-solid-svg-icons';
+import { faAddressCard, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import { routes } from './app.routes';
 import { TranslatedTitleStrategy } from './i18n/translated-title';
@@ -37,7 +37,8 @@ export const appConfig: ApplicationConfig = {
               faLinkedin,
               faBluesky,
         faXTwitter,
-        faCircle,
+        faEnvelope,
+        faAddressCard,
       );
     }),
   ],

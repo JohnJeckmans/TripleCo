@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Printing / PDF: A4 with modest margins; no lone lines at page breaks */
+@page { size: A4; margin: 12mm; }
+@media print {
+  p { orphans: 3; widows: 3; }
+}

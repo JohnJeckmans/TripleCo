@@ -32,7 +32,7 @@ describe('NavMenu', () => {
     el.querySelector<HTMLButtonElement>('#menu-bars')!.click();
     await fixture.whenStable();
 
-    el.querySelector<HTMLAnchorElement>('#mobile-nav a[href="#projects"]')!.click();
+    el.querySelector<HTMLAnchorElement>('#mobile-nav a[href="#services"]')!.click();
     await fixture.whenStable();
     expect(el.querySelector('#mobile-nav')!.classList).not.toContain('nav-expand');
   });

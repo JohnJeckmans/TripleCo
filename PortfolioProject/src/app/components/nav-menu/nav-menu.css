@@ -7,8 +7,8 @@ a, li { text-decoration: none ;}
 /* Links fill their menu item and take its colour (hover included) */
 .sidebar-items a, .nav-items a {display: block; color: inherit;}
 
-/* Hamburger is a real <button> (keyboard + screen reader friendly); strip browser button styling */
-.menu-container {background: none; border: 0; padding: 0;}
+/* Hamburger is a real <button> (keyboard + screen reader friendly); dark backing keeps it visible on light sections */
+.menu-container {background: rgba(0,0,0,.6); border: 0; border-radius: 4px; padding: 0 6px;}
 
 .sidebar-container {
     position: fixed;
@@ -151,4 +151,8 @@ a, li { text-decoration: none ;}
         -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
         transform: rotate(45deg) translate(-8px, -8px) ;
       }
+}
+/* Not needed on paper */
+@media print {
+  #menu-bars, .mobile-nav, .sidebar-container { display: none !important; }
 }

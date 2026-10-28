@@ -1,126 +1,129 @@
 // English texts for the whole site. nl.ts and de.ts must contain exactly the same keys.
-// To add a line to a list (e.g. resume.experience.items), add it in all three files.
+// To add a line to a list (e.g. experience.roles), add it in all three files.
+// Content source: LinkedIn profile (October 2026).
 export const en = {
   titles: {
-    home: 'TripleCo Solutions',
-    resume: 'John Jeckmans | TripleCo',
-    engineering: 'Engineering Solutions | TripleCo',
+    home: 'John Jeckmans | Board Advisor | TripleCo',
   },
   language: {
     choose: 'Choose language',
   },
-  common: {
-    sendEmail: 'Click to send Email',
-    location: 'Twente - Netherlands - EU',
-    visitTripleCo: 'Visit TripleCo',
-    about: 'About',
-    experience: 'Experience',
-  },
   nav: {
     menu: 'Menu',
     home: 'Home',
-    about: 'About',
-    projects: 'Projects',
+    about: 'Approach',
+    services: 'Services',
+    experience: 'Experience',
     contact: 'Contact',
   },
-  home: {
-    title: 'Welcome to TripleCo',
-    aboutTitle: 'Introduction',
-    aboutImageAlt: 'Picture of me',
-    tagline: 'Bringing ease in transformational changes by creating space!',
-    callToAction: "Need things set in motion? Let's talk.",
-    moreInfo: 'Click for more information',
-    projectsTitle: 'Click to view Projects & Services',
-    projects: {
-      solutionsAlt: 'General Solutions',
-      lightingTitle: 'Lighting by TripleCo Solutions',
-      lightingAlt: 'Lighting',
-      buyAtBol: 'Buy at Bol.com',
-      webshopTitle: 'Webshop (under construction)',
-      webshopAlt: 'Project',
-      viewFesh: 'View Fesh Store',
-      feshReferral: 'Referral fesh.store',
-      engineeringTitle: 'Engineering Solutions',
-      engineeringAlt: 'Engineering',
-      viewProject: 'View Project',
-    },
-    businessCardsAlt: 'Business Cards',
+  hero: {
+    photoAlt: 'Portrait of John Jeckmans',
+    headline: 'Board Advisor · International Industrial Leader',
+    focus: 'Strategy, Transformation & Growth',
+    location: 'Twente, the Netherlands · active across Europe',
+    emailMe: 'Email me',
+    linkedin: 'LinkedIn',
+    saveContact: 'Save contact',
   },
-  resume: {
-    skills: 'Skills',
-    interests: 'Interests',
-    quote: '"Bringing ease in transformational changes by creating space!"',
-    intro: [
-      'I have over 40 years of international experience in B2B industrial surroundings. Started with a technical foundation in operations & maintenance. Have designed, planned, built and commissioned complete production facilities. Ended up in product management, marketing & sales. Both executive as well as C-level. And started TripleCo in 2004.',
-      'Have worked in and with industries like (petro-)chemicals; power generation conventional, renewable and nuclear; marine commercial and navy; automotive mechanical manufacturing, large water transport; fire fighting equipment; waste water & drinking water sector; pulp & paper',
-      "From 2004, my aim is predominantly on assisting technical start-ups, SME's, both local, national and international.",
+  approach: {
+    title: 'Approach',
+    paragraphs: [
+      'I bring international leadership experience across industrial, energy and technology-driven environments, with a focus on strategy, transformation and sustainable growth.',
+      'I am particularly effective where organisations face strategic complexity, changing market conditions, stalled growth, or the need to align leadership, operations and long-term direction.',
+      'Through TripleCo, I support boards, owners and leadership teams who need experienced judgement on growth, transformation, governance and strategic direction.',
     ],
-    experience: {
-      title: 'Business Change Catalyst & Executioner',
-      items: [
-        'Executive & Organisational Coaching, based on the so-called Organisational Development Approach.',
-        'Growth Financing.',
-        'Strategic Consulting, including business plan development, marketing & sales strategy development.',
-        '(New) business development, alliances both horizontal as well as vertical.',
-        'Training, Coaching & counseling of individuals & teams.',
-        'Change management & processes.',
-        'ERP implementation.',
-        'Data driven process valuations.',
-        'Visualisation.',
-        'Pain in the *ss, if need be.',
-        'Start-up business development',
-        'All via a very practical, down to earth, hands-on implementation. An active partner in a network of self-employed professionals in the same line of business.',
-      ],
-    },
-    projectsTitle: 'Project (selection)',
-    projects: [
-      'Data visualisation and BI Dashboard development',
-      'Business Development for programmable & intelligent professional LED lighting systems',
-      'Strategic Procurement Department (corporate NL)',
-      'Merger process consultation (renewable energy sector), management & control systems (finance, QA&QC) (Germany)',
-      'Customerside ERP Implementation; strategy to processes, data cleansing, building a product configurator, (transfer) pricing, technical sales manuals, ISO 9000 system, complaint management, migration of financials, CRM application',
-      'Divestment of a family owned/run SME (two owners)',
-      'Reorganisation company processes, coaching of staff and owner, project/contract management equipment supplies food, offshore.',
-      'Innovation Adviser Syntens in built environment (sustainability, collaboration in supply chain, coaching)',
-      'Inventory and development plan change project electronics manufacturer(Taiwan).',
-    ],
-    interestItems: [
-      'Getting to know more independent professionals worldwide, but at least in Netherlands, Germany.',
-      'Everything related to new innovations, basic research for a sustainable future of all.',
+    quote: 'Clarity over complexity, substance over rhetoric, results over presentation.',
+  },
+  services: {
+    title: 'How I help',
+    intro: 'Connecting long-term direction with practical execution and sustainable performance improvement.',
+    items: [
+      {
+        title: 'Board advisory & governance',
+        text: 'Experienced judgement on strategic direction, decision quality and accountability, built on board and venture-capital roles.',
+      },
+      {
+        title: 'Strategy & transformation',
+        text: 'Turnaround, repositioning and change: translating strategic ambition into structured execution.',
+      },
+      {
+        title: 'Growth & business development',
+        text: 'International business development, alliances and the commercialisation of new technology.',
+      },
+      {
+        title: 'Leadership alignment',
+        text: 'Aligning leadership, operations and stakeholders across organisations, disciplines and countries.',
+      },
     ],
   },
-  engineering: {
-    quote: '"Structural solutions to generate (additional) Engineering Capacity!"',
-    intro: [
-      'We are part of a business network "Dutch Company Doctors": specialised in change management, process development, matchmaking, outsourcing, training and co-partnerships in various fields.',
-      'Thanks to our worldwide network and experiences gained over the last decennia, we are able to support you with the structural outsourcing of your engineering activities.',
+  experience: {
+    title: 'Experience',
+    roles: [
+      {
+        role: 'International Project Director',
+        org: 'KMTC Technologies Holding GmbH',
+        period: '2022 – present',
+        place: 'Fellbach, Germany',
+        text: 'Leading international technology and industrial development programmes, including the Vortifer propulsion programme with academic and industrial partners.',
+      },
+      {
+        role: 'Founder & Owner',
+        org: 'TripleCo',
+        period: '2004 – present',
+        place: 'Europe',
+        text: 'Independent platform for strategic advisory, business development and transformation support in industrial and growth-oriented environments.',
+      },
+      {
+        role: 'Regional Director',
+        org: 'The Alpha Group International',
+        period: '2014 – 2021',
+        place: 'Netherlands, Belgium, Luxembourg, Germany',
+        text: 'Led peer advisory groups of CEOs and business owners on scaling, profitability, leadership alignment and business direction.',
+      },
+      {
+        role: 'Partner',
+        org: 'Dutch Executive Search',
+        period: '2011 – 2018',
+        place: 'Netherlands',
+        text: 'Recruitment of senior executives, with a focus on leadership assessment, succession and executive fit.',
+      },
+      {
+        role: 'CEO',
+        org: 'LEIDS BV',
+        period: '2011 – 2014',
+        place: 'Enschede, Netherlands',
+        text: 'Professional LED lighting solutions: strategic direction, commercial development and technology commercialisation.',
+      },
+      {
+        role: 'CEO',
+        org: 'EVU Anlagenbau International GmbH',
+        period: '2006 – 2012',
+        place: 'Gröditz, Germany',
+        text: 'International engineering company in water treatment, renewable energy and environmental systems.',
+      },
     ],
-    services: {
-      title: 'ENGINEERING SERVICES',
-      subtitle: 'Outsourcing as well as insourcing?',
-      items: [
-        'Combination of Engineering Solutions in a Manufacturing Environment',
-        'Cost Effective',
-        'Shorter Product Development Cycle.',
-        'Flexible capacity, multi-shift operation',
-        'Experience with PLM environment',
-        'High security level - Data protection and confidentiality',
-      ],
-    },
-    team: {
-      title: 'ENGINEERING TEAM',
-      items: [
-        'A talent pool of 50+ qualified Engineers',
-        'Qualifications: post graduate engineer, engineers and diploma engineers with multiple CAD Software skills.',
-        'Software Infrastructure: Pro-E, Inventor, UG NX, Solid Works and AutoCAD with 30 workstations.',
-      ],
-    },
-    support: {
-      title: 'Our Support in the EU',
-      subtitle: 'preparing & assisting your organisation',
-      // The original page has three empty lines here, waiting for content.
-      items: ['', '', '', 'in a very practical, down to earth, hands-on way of working.'],
-    },
+    boardTitle: 'Board roles',
+    boards: [
+      { role: 'Board Treasurer', org: 'Smart Energy & Technology Systems (SETS)', period: '2012 – 2014' },
+      { role: 'Board Member', org: 'Stichting PPM Stimulans (venture capital)', period: '2002 – 2011' },
+    ],
+    sectorsTitle: 'Sectors',
+    sectors: ['Energy', 'Water', 'Environmental systems', 'Manufacturing', 'Technology ventures', 'Maritime'],
+  },
+  education: {
+    title: 'Education',
+    items: [
+      { degree: 'MBA, Technology Management', school: 'TSM Business School', period: '1999 – 2001' },
+      { degree: "BSc Ship's Engineering", school: 'Amsterdam University of Applied Sciences', period: '1975 – 1979' },
+      { degree: 'Executive Coaching, Business Development Programme', school: 'IIB', period: '2009' },
+    ],
+  },
+  contact: {
+    title: 'Contact',
+    text: "Need things set in motion? Let's talk.",
+    email: 'Email',
+    saveContactHint: 'Adds my details to your phone or address book.',
+    follow: 'Follow me',
   },
 };
 

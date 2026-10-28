@@ -1,8 +1,9 @@
-# TripleCo Solutions website
+# John Jeckmans | TripleCo website
 
-The TripleCo Solutions portfolio site: a single-page site with a video intro, an About card,
-project tiles and contact details, plus two sub-pages (**Resume** and **Engineering Solutions**)
-that open on top of the home page. It also works as an installable Progressive Web App.
+A one-page "digital business card" for John Jeckmans (Board Advisor, TripleCo). It has a video
+introduction and five sections: Approach, How I help, Experience (with board roles, education and
+sectors) and Contact. Visitors can email directly or save the contact card to their phone.
+The content is based on the LinkedIn profile. The site also works as an installable Progressive Web App.
 
 Built with [Angular](https://angular.dev) 22 and [Font Awesome](https://fontawesome.com) icons,
 hosted on Firebase Hosting.
@@ -30,22 +31,21 @@ npm install
 
 ```
 public/                    Files served as-is
-  assets/img/              Photos, project images, background video
+  assets/img/              Portrait photo, background video, social-media preview image
   assets/Font/             Web fonts
   assets/icons/            App icons and favicon
   manifest.webmanifest     PWA settings (name, colours, icons)
+  John-Jeckmans.vcf        'Save contact' card: name, email, mobile number (not shown on the page)
 src/
   index.html               Page title and social-media preview tags
   app/
-    app.html / app.css     Home page: intro, about, projects, contact, footer
-    app.routes.ts          The /resume and /engineering pages
+    app.html / app.css     The whole page: introduction, approach, services, experience, contact
+    app.routes.ts          Sends old links (/resume, /engineering) to the page
     app.config.ts          App setup, including which icons are available
     i18n/                  All texts in EN / NL / DE, and the language logic
     components/
       language-switcher/   Flag menu (top-right) for choosing the language
       nav-menu/            Hamburger menu (phones) and hover sidebar (desktop)
-      resume/              Resume page
-      engineering/         Engineering Solutions page
 ```
 
 To use a new Font Awesome icon, add it to the list in `src/app/app.config.ts`.
@@ -67,6 +67,8 @@ src/app/i18n/de.ts   German
 To change a text, edit it in all three files. The files must have the same items. If one is
 missing, `npm run build` stops with an error that names the missing item, and `npm test`
 checks that every list has the same number of lines in each language.
+
+To change the contact card (e.g. a new phone number), edit `public/John-Jeckmans.vcf`.
 
 ## Deploying to Firebase
 

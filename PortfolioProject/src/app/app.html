@@ -1,144 +1,136 @@
-<div class="wrapper">
-  <app-nav-menu></app-nav-menu>
-  <app-language-switcher></app-language-switcher>
-  <router-outlet></router-outlet>
-  <!-- Home Section   ---------------------------------------------------------------------------->
-  <section id="home">
+@let tx = t();
+<app-nav-menu></app-nav-menu>
+<app-language-switcher></app-language-switcher>
 
-    <!-- Video Background -->
-    <video loop muted autoplay playsinline id="video-background">
-      <source src="assets/img/Video-background.mp4" type="video/mp4">
+<main>
+  <!-- Introduction: water video, photo, name, headline, main actions -->
+  <section id="home" class="hero">
+    <video loop muted autoplay playsinline aria-hidden="true" class="hero-video">
+      <source src="assets/img/Video-background.mp4" type="video/mp4" />
     </video>
-    <div class="video-overlay"></div>
+    <div class="hero-overlay"></div>
 
-    <!--  Main Title -->
-    <h1 class="main-title">{{ t().home.title }}</h1>
+    <div class="hero-content">
+      <div class="hero-photo">
+        <img src="assets/img/portrait.jpg" [alt]="tx.hero.photoAlt" width="800" height="800" />
+      </div>
+      <h1 class="hero-name">John <span class="accent">Jeckmans</span></h1>
+      <p class="hero-headline">{{ tx.hero.headline }}</p>
+      <p class="hero-focus">{{ tx.hero.focus }}</p>
+      <p class="hero-location">{{ tx.hero.location }}</p>
 
-    <!-- Social Icons -->
-    <div class="social-icons">
-      <!-- <a href="https://github.com/JohnJeckmans" target="_blank" rel="noopener"><fa-icon [icon]="['fab','github']" title="Github"></fa-icon></a> -->
-      <!-- <a href="https://www.youtube.com/user/JohnJeckmans/about" target="_blank" rel="noopener"><fa-icon [icon]="['fab','youtube']" title="Youtube"></fa-icon></a> -->
-      <a href="https://www.linkedin.com/in/johnjeckmans/" target="_blank" rel="noopener"><fa-icon [icon]="['fab','linkedin']" title="Linkedin"></fa-icon></a>
-      <a href="https://codepen.io/JohnJeckmans" target="_blank" rel="noopener"><fa-icon [icon]="['fab','codepen']" title="Codepen"></fa-icon></a>
-      <a href="https://bsky.app/profile/johnjeckmans.bsky.social" target="_blank" rel="noopener"><fa-icon [icon]="['fab','bluesky']" title="Bluesky"></fa-icon></a>
-      <a href="https://x.com/John_Jeckmans" target="_blank" rel="noopener"><fa-icon [icon]="['fab','x-twitter']" title="X (Twitter)"></fa-icon></a>
+      <div class="actions">
+        <a class="button primary" [href]="'mailto:' + email">
+          <fa-icon [icon]="['fas', 'envelope']"></fa-icon> {{ tx.hero.emailMe }}
+        </a>
+        <a class="button" href="https://www.linkedin.com/in/johnjeckmans/" target="_blank" rel="noopener">
+          <fa-icon [icon]="['fab', 'linkedin']"></fa-icon> {{ tx.hero.linkedin }}
+        </a>
+        <a class="button" [href]="vcard" download="John-Jeckmans.vcf">
+          <fa-icon [icon]="['fas', 'address-card']"></fa-icon> {{ tx.hero.saveContact }}
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- About Section   --------------------------------------------------------------------------->
-  <div class="background">
-    <section id="about">
-      <div class="card">
-        <img src="assets/img/mugshot.jpg" [alt]="t().home.aboutImageAlt" class="about-img">
-        <div class="card-body">
-          <h1 class="card-title">{{ t().home.aboutTitle }}</h1>
-          <p class="card-text">{{ t().home.tagline }}</p>
-          <p class="card-text">{{ t().home.callToAction }}</p>
-          <a routerLink="/resume" routerLinkActive="active">
-            <div class="card-button">{{ t().home.moreInfo }}</div>
-          </a>
+  <!-- Approach -->
+  <section id="about" class="section">
+    <div class="container narrow">
+      <h2 class="section-title">{{ tx.approach.title }}</h2>
+      @for (paragraph of tx.approach.paragraphs; track $index) {
+        <p class="lead">{{ paragraph }}</p>
+      }
+      <blockquote class="quote">“{{ tx.approach.quote }}”</blockquote>
+    </div>
+  </section>
+
+  <!-- How I help -->
+  <section id="services" class="section alt">
+    <div class="container">
+      <h2 class="section-title">{{ tx.services.title }}</h2>
+      <p class="section-intro">{{ tx.services.intro }}</p>
+      <div class="tiles">
+        @for (service of tx.services.items; track $index) {
+          <article class="tile">
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.text }}</p>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience + education -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section-title">{{ tx.experience.title }}</h2>
+      <ol class="timeline">
+        @for (job of tx.experience.roles; track $index) {
+          <li class="timeline-item">
+            <p class="period">{{ job.period }}</p>
+            <div>
+              <h3 class="role">{{ job.role }}</h3>
+              <p class="org">{{ job.org }} · {{ job.place }}</p>
+              <p>{{ job.text }}</p>
+            </div>
+          </li>
+        }
+      </ol>
+
+      <div class="columns">
+        <div>
+          <h3 class="sub-title">{{ tx.experience.boardTitle }}</h3>
+          <ul class="plain-list">
+            @for (board of tx.experience.boards; track $index) {
+              <li><strong>{{ board.role }}</strong>, {{ board.org }} <span class="muted">({{ board.period }})</span></li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h3 class="sub-title">{{ tx.education.title }}</h3>
+          <ul class="plain-list">
+            @for (item of tx.education.items; track $index) {
+              <li><strong>{{ item.degree }}</strong>, {{ item.school }} <span class="muted">({{ item.period }})</span></li>
+            }
+          </ul>
         </div>
       </div>
-    </section>
-  </div>
- 
-  <!-- Projects Section   ------------------------------------------------------------------------>
-  <section id="projects">
-    <div class="projects">
-      <h1 class="projects-title">{{ t().home.projectsTitle }}</h1>
-      <div class="project-group-1">
-        <article class="project-item">
-          <div class="project-img">
-            <a href="http://www.tripleco.nl/nl/solutions-by-tripleco" ><img src="assets/img/Project-1.png" [alt]="t().home.projects.solutionsAlt"></a>
-          </div>
-          <div class="project-caption">
-            <h4 class="project-title"><a href="http://www.tripleco.nl/nl/solutions-by-tripleco">TripleCo Solutions</a></h4>
-            <h6 class="github-link"><a href="mailto:solutions@tripleco.nl?subject=General information requirement" target="_blank" rel="noopener" [title]="t().common.sendEmail">{{ t().common.sendEmail }}</a></h6>
-          </div>
-        </article>
-        <article class="project-item">
-          <div class="project-img">
-            <a href="http://www.tripleco.nl/nl/solutions-by-tripleco" ><img src="assets/img/Project-2.png" [alt]="t().home.projects.lightingAlt"></a>
-          </div>
-          <div class="project-caption">
-            <h4 class="project-title"><a href="http://www.tripleco.nl/nl/solutions-by-tripleco">{{ t().home.projects.lightingTitle }}</a></h4>
-            <h6 class="github-link"><a href="https://www.bol.com/nl/b/tripleco-solutions/15819508/" [title]="t().home.projects.buyAtBol">Bol.com</a></h6>
-          </div>
-        </article>
-        <article class="project-item">
-          <div class="project-img">
-            <a href="http://www.tripleco.nl/nl/solutions-by-tripleco" ><img src="assets/img/Project-3.png" [alt]="t().home.projects.webshopAlt"></a>
-          </div>
-          <div class="project-caption">
-            <h4 class="project-title"><a href="https://triplecosolutions.fesh.store/">{{ t().home.projects.webshopTitle }}</a></h4>
-            <h6 class="github-link"><a href="https://fesh.store/?from=3535" [title]="t().home.projects.viewFesh">{{ t().home.projects.feshReferral }}</a></h6>
-          </div>
-        </article>
-      </div>
-      <div class="project_group-2"></div>
-        <article class="project-item">
-          <div class="project-img">
-            <a href="http://www.tripleco.nl/nl/solutions-by-tripleco" ><img src="assets/img/Project-4.png" [alt]="t().home.projects.engineeringAlt"></a>
-          </div>
-          <div class="project-caption">
-            <h4 class="project-title"><a routerLink="/engineering" routerLinkActive="active" [title]="t().home.projects.viewProject">{{ t().home.projects.engineeringTitle }}</a></h4>
-            <h6 class="github-link"><a href="mailto:solutions@tripleco.nl?subject=Engineering Solutions" target="_blank" rel="noopener" [title]="t().common.sendEmail">{{ t().common.sendEmail }}</a></h6>
-          </div>
-        </article>
-        <article class="project-item">
-            <div class="project-img">
-              <a href="http://www.kmtc-technologies.com" ><img src="assets/img/Project-5.png" alt="Project-5"></a>
-            </div>
-            <div class="project-caption">
-              <h4 class="project-title"><a href="https://spark.adobe.com/page/MhKKvPO6viMqI/">KMTC</a></h4>
-              <h6 class="github-link"><a href="mailto:jj@kmtc-technologies.com?subject=Information Request" target="_blank" rel="noopener" [title]="t().common.sendEmail">{{ t().common.sendEmail }}</a></h6>
-            </div>
-          </article> 
-          <article class="project-item">
-              <div class="project-img">
-                <a href="http://www.kmtc-technologies.com" ><img src="assets/img/Project-6.png" alt="Project-6"></a>
-              </div>
-              <div class="project-caption">
-                <h4 class="project-title"><a href="https://spark.adobe.com/page/xSG6U0e4pciGL/">KMTC</a></h4>
-                <h6 class="github-link"><a href="mailto:jj@kmtc-technologies.com?subject=Information Request" target="_blank" rel="noopener" [title]="t().common.sendEmail">{{ t().common.sendEmail }}</a></h6>
-            </div>
-            </article>               
-        
-    </div>
-  </section>
-  <!-- Contact Section   ------------------------------------------------------------------------->
-  <div class="background">
-    <section id="contact">
-     
-      <!-- Mail to Link -->
-      <!-- <a href="mailto:info@tripleco.nl" class="contact-mail" target="_blank"       rel="noopener">info@tripleco.nl
-      </a> -->
-      
-      <!-- Video Background -->
-      <!-- <video loop muted autoplay id="video-background-2">
-            <source src="assets/img/Video-background-2.mp4" type="video/mp4">
-      </video>   -->
 
-      <!-- Business Card Mockup -->
-      <a href="mailto:info@tripleco.nl" target="_blank" rel="noopener" [title]="t().common.sendEmail">
-        <img src="assets/img/business-card-mockup.png" [alt]="t().home.businessCardsAlt" class="business-card">
-      </a>
-      
-      
-    </section>
-   
-  </div>
- 
-  <!-- Footer Section   -------------------------------------------------------------------------->
-  <section id="footer">
-    <div class="footer-icons">
-      <a href="https://github.com/JohnJeckmans" target="_blank" rel="noopener"><fa-icon [icon]="['fab','github']" title="Github" style="margin-left: 0"></fa-icon></a>
-      <!-- <a href="https://www.youtube.com/user/JohnJeckmans/about" target="_blank" rel="noopener"><fa-icon [icon]="['fab','youtube']" title="Youtube"></fa-icon></a> -->
-      <a href="https://www.linkedin.com/in/johnjeckmans/" target="_blank" rel="noopener"><fa-icon [icon]="['fab','linkedin']" title="Linkedin"></fa-icon></a>
-      <a href="https://codepen.io/JohnJeckmans" target="_blank" rel="noopener"><fa-icon [icon]="['fab','codepen']" title="Codepen"></fa-icon></a>
-      <a href="https://bsky.app/profile/johnjeckmans.bsky.social" target="_blank" rel="noopener"><fa-icon [icon]="['fab','bluesky']" title="Bluesky"></fa-icon></a>
-      <a href="https://x.com/John_Jeckmans" target="_blank" rel="noopener"><fa-icon [icon]="['fab','x-twitter']" title="X (Twitter)"></fa-icon></a>
-      <p class="footer-text">John Jeckmans - TripleCo - {{ year }}</p>
+      <h3 class="sub-title">{{ tx.experience.sectorsTitle }}</h3>
+      <ul class="chips">
+        @for (sector of tx.experience.sectors; track $index) {
+          <li>{{ sector }}</li>
+        }
+      </ul>
     </div>
   </section>
- </div>
+
+  <!-- Contact -->
+  <section id="contact" class="section dark">
+    <div class="container narrow center">
+      <h2 class="section-title">{{ tx.contact.title }}</h2>
+      <p class="lead">{{ tx.contact.text }}</p>
+
+      <div class="actions">
+        <a class="button primary" [href]="'mailto:' + email">
+          <fa-icon [icon]="['fas', 'envelope']"></fa-icon> {{ email }}
+        </a>
+        <a class="button" [href]="vcard" download="John-Jeckmans.vcf">
+          <fa-icon [icon]="['fas', 'address-card']"></fa-icon> {{ tx.hero.saveContact }}
+        </a>
+      </div>
+      <p class="hint">{{ tx.contact.saveContactHint }}</p>
+
+      <p class="follow">{{ tx.contact.follow }}</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/johnjeckmans/" target="_blank" rel="noopener" title="LinkedIn"><fa-icon [icon]="['fab', 'linkedin']"></fa-icon></a>
+        <a href="https://bsky.app/profile/johnjeckmans.bsky.social" target="_blank" rel="noopener" title="Bluesky"><fa-icon [icon]="['fab', 'bluesky']"></fa-icon></a>
+        <a href="https://x.com/John_Jeckmans" target="_blank" rel="noopener" title="X (Twitter)"><fa-icon [icon]="['fab', 'x-twitter']"></fa-icon></a>
+        <a href="https://github.com/JohnJeckmans" target="_blank" rel="noopener" title="GitHub"><fa-icon [icon]="['fab', 'github']"></fa-icon></a>
+        <a href="https://codepen.io/JohnJeckmans" target="_blank" rel="noopener" title="CodePen"><fa-icon [icon]="['fab', 'codepen']"></fa-icon></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">John Jeckmans · TripleCo · {{ year }}</footer>

@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Jeckmans;John;;;
+FN:John Jeckmans
+ORG:TripleCo
+TITLE:Board Advisor | Strategy\, Transformation & Growth
+EMAIL;TYPE=INTERNET,WORK:john.jeckmans@tripleco.nl
+TEL;TYPE=CELL,VOICE:+31638619522
+ADR;TYPE=WORK:;;;Enschede;Overijssel;;Netherlands
+URL:https://www.linkedin.com/in/johnjeckmans/
+END:VCARD
