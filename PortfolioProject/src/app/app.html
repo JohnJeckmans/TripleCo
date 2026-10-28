@@ -5,8 +5,8 @@
   <section id="home">
 
     <!-- Video Background -->
-    <video loop muted autoplay id="video-background">
-      <source src="../assets/img/Video-background.mp4" type="video/mp4">
+    <video loop muted autoplay playsinline id="video-background">
+      <source src="assets/img/Video-background.mp4" type="video/mp4">
     </video>
     <div class="video-overlay"></div>
 
@@ -23,7 +23,7 @@
       <a href="https://www.facebook.com/TripleCoNetherlands/" target="_blank" rel="noopener"><fa-icon [icon]="['fab','facebook']" title="Facebook"></fa-icon></a>
       <a href="https://www.xing.com/profile/John_Jeckmans/cv" target="_blank" rel="noopener"><fa-icon [icon]="['fab','xing']" title="Xing"></fa-icon></a>
       <a href="https://codepen.io/JohnJeckmans" target="_blank" rel="noopener"><fa-icon [icon]="['fab','codepen']" title="Codepen"></fa-icon></a>
-      <a href="https://twitter.com/John_Jeckmans" target="_blank" rel="noopener"><fa-icon [icon]="['fab','twitter']" title="Twitter"></fa-icon></a>
+      <a href="https://x.com/John_Jeckmans" target="_blank" rel="noopener"><fa-icon [icon]="['fab','x-twitter']" title="X (Twitter)"></fa-icon></a>
     </div>
   </section>
 
@@ -31,12 +31,12 @@
   <div class="background">
     <section id="about">
       <div class="card">
-        <img src="../assets/img/mugshot.jpg" alt="Picture of me" class="about-img">
+        <img src="assets/img/mugshot.jpg" alt="Picture of me" class="about-img">
         <div class="card-body">
           <h1 class="card-title">Introduction</h1>
           <p class="card-text">Bringing ease in transformational changes by creating space!</p>
           <p class="card-text">Need things set in motion? Let's talk.</p>
-          <a routerLink="/resume" routerLinkActive="active" (click)="scrollToTop()">
+          <a routerLink="/resume" routerLinkActive="active">
             <div class="card-button">Click for more information</div>
           </a>
         </div>
@@ -51,7 +51,7 @@
       <div class="project-group-1">
         <article class="project-item">
           <div class="project-img">
-            <a href="http://www.tripleco.nl/nl/solutions-by-tripleco" ><img src="../assets/img/Project-1.png" alt="General Solutions"></a>
+            <a href="http://www.tripleco.nl/nl/solutions-by-tripleco" ><img src="assets/img/Project-1.png" alt="General Solutions"></a>
           </div>
           <div class="project-caption">
             <h4 class="project-title"><a href="http://www.tripleco.nl/nl/solutions-by-tripleco">TripleCo Solutions</a></h4>
@@ -60,7 +60,7 @@
         </article>
         <article class="project-item">
           <div class="project-img">
-            <a href="http://www.tripleco.nl/nl/solutions-by-tripleco" ><img src="../assets/img/Project-2.png" alt="Lighting"></a>
+            <a href="http://www.tripleco.nl/nl/solutions-by-tripleco" ><img src="assets/img/Project-2.png" alt="Lighting"></a>
           </div>
           <div class="project-caption">
             <h4 class="project-title"><a href="http://www.tripleco.nl/nl/solutions-by-tripleco">Lighting by TripleCo Solutions</a></h4>
@@ -69,7 +69,7 @@
         </article>
         <article class="project-item">
           <div class="project-img">
-            <a href="http://www.tripleco.nl/nl/solutions-by-tripleco" ><img src="../assets/img/Project-3.png" alt="Project"></a>
+            <a href="http://www.tripleco.nl/nl/solutions-by-tripleco" ><img src="assets/img/Project-3.png" alt="Project"></a>
           </div>
           <div class="project-caption">
             <h4 class="project-title"><a href="https://triplecosolutions.fesh.store/">Webshop (under construction)</a></h4>
@@ -80,16 +80,16 @@
       <div class="project_group-2"></div>
         <article class="project-item">
           <div class="project-img">
-            <a href="http://www.tripleco.nl/nl/solutions-by-tripleco" ><img src="../assets/img/Project-4.png" alt="Engineering"></a>
+            <a href="http://www.tripleco.nl/nl/solutions-by-tripleco" ><img src="assets/img/Project-4.png" alt="Engineering"></a>
           </div>
           <div class="project-caption">
-            <h4 class="project-title"><a routerLink="/engineering" routerLinkActive="active" (click)="scrollToTop()" title="View Project">Engineering Solutions</a></h4>
+            <h4 class="project-title"><a routerLink="/engineering" routerLinkActive="active" title="View Project">Engineering Solutions</a></h4>
             <h6 class="github-link"><a href="mailto:solutions@tripleco.nl?subject=Engineering Solutions" target="_blank" rel="noopener" title="Click to send Email">Click to send Email</a></h6>
           </div>
         </article>
         <article class="project-item">
             <div class="project-img">
-              <a href="http://www.kmtc-technologies.com" ><img src="../assets/img/Project-5.png" alt="Project-5"></a>
+              <a href="http://www.kmtc-technologies.com" ><img src="assets/img/Project-5.png" alt="Project-5"></a>
             </div>
             <div class="project-caption">
               <h4 class="project-title"><a href="https://spark.adobe.com/page/MhKKvPO6viMqI/">KMTC</a></h4>
@@ -98,7 +98,7 @@
           </article> 
           <article class="project-item">
               <div class="project-img">
-                <a href="http://www.kmtc-technologies.com" ><img src="../assets/img/Project-6.png" alt="Project-6"></a>
+                <a href="http://www.kmtc-technologies.com" ><img src="assets/img/Project-6.png" alt="Project-6"></a>
               </div>
               <div class="project-caption">
                 <h4 class="project-title"><a href="https://spark.adobe.com/page/xSG6U0e4pciGL/">KMTC</a></h4>
@@ -118,12 +118,12 @@
       
       <!-- Video Background -->
       <!-- <video loop muted autoplay id="video-background-2">
-            <source src="../assets/img/Video-background-2.mp4" type="video/mp4">
+            <source src="assets/img/Video-background-2.mp4" type="video/mp4">
       </video>   -->
 
       <!-- Business Card Mockup -->
       <a href="mailto:info@tripleco.nl" target="_blank" rel="noopener" title="Click to send Email">
-        <img src="../assets/img/business-card-mockup.png" alt="Business Cards" class="business-card">
+        <img src="assets/img/business-card-mockup.png" alt="Business Cards" class="business-card">
       </a>
       
       
@@ -142,8 +142,8 @@
       <a href="https://www.facebook.com/TripleCoNetherlands/" target="_blank" rel="noopener"><fa-icon [icon]="['fab','facebook']" title="Facebook"></fa-icon></a>
       <a href="https://www.xing.com/profile/John_Jeckmans/cv" target="_blank" rel="noopener"><fa-icon [icon]="['fab','xing']" title="Xing"></fa-icon></a>
       <a href="https://codepen.io/JohnJeckmans" target="_blank" rel="noopener"><fa-icon [icon]="['fab','codepen']" title="Codepen"></fa-icon></a>
-      <a href="https://twitter.com/John_Jeckmans" target="_blank" rel="noopener"><fa-icon [icon]="['fab','twitter']" title="Twitter"></fa-icon></a>
-      <p class="footer-text">John Jeckmans - TripleCo - 2019</p>
+      <a href="https://x.com/John_Jeckmans" target="_blank" rel="noopener"><fa-icon [icon]="['fab','x-twitter']" title="X (Twitter)"></fa-icon></a>
+      <p class="footer-text">John Jeckmans - TripleCo - {{ year }}</p>
     </div>
   </section>
  </div>

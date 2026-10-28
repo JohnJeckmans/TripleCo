@@ -4,6 +4,12 @@ a, li { text-decoration: none ;}
 #menu-bars {display: none;}
 #mobile-nav {display: none;}
 
+/* Links fill their menu item and take its colour (hover included) */
+.sidebar-items a, .nav-items a {display: block; color: inherit;}
+
+/* Hamburger is a real <button> (keyboard + screen reader friendly); strip browser button styling */
+.menu-container {background: none; border: 0; padding: 0;}
+
 .sidebar-container {
     position: fixed;
     display: initial;
@@ -41,8 +47,8 @@ a, li { text-decoration: none ;}
     background-color: rgba(0,0,0,.5);
 }
 
-.sitebar-items li:hover {
-    color:rgba(0,0,0,.85)te;
+.sidebar-items li:hover {
+    color: rgba(0,0,0,.85);
     background-color: #fbfbfb;
     transition: .3s;
 }

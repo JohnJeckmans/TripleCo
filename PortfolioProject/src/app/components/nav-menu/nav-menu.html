@@ -1,0 +1,43 @@
+<!-- Hamburger menu -->
+<button
+  type="button"
+  class="menu-container"
+  id="menu-bars"
+  [class.change]="mobileOpen()"
+  [attr.aria-expanded]="mobileOpen()"
+  aria-controls="mobile-nav"
+  aria-label="Menu"
+  (click)="toggleMobile()"
+>
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</button>
+
+<!-- Mobile Navigation -->
+<nav class="mobile-nav" id="mobile-nav" [class.nav-expand]="mobileOpen()">
+  <ul class="nav-items">
+    <li style="padding-top: 48px"></li>
+    <li><a href="#home" (click)="toggleMobile()">Home</a></li>
+    <li><a href="#about" (click)="toggleMobile()">About</a></li>
+    <li><a href="#projects" (click)="toggleMobile()">Projects</a></li>
+    <li><a href="#contact" (click)="toggleMobile()">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Desktop Navigation -->
+<nav
+  class="sidebar-container"
+  (mouseenter)="sidebarOpen.set(true)"
+  (mouseleave)="sidebarOpen.set(false)"
+  (focusin)="sidebarOpen.set(true)"
+  (focusout)="sidebarOpen.set(false)"
+>
+  <p class="sidebar-toggle" id="sidebar-toggle" [class.display-none]="sidebarOpen()">Menu</p>
+  <ul class="sidebar-items desktop-nav" id="desktop-nav" [class.display-none]="!sidebarOpen()">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>

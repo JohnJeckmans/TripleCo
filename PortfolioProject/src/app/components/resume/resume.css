@@ -1,5 +1,5 @@
-@font-face { font-family: open-sans; src: url(../../../assets/Font/opensans-reg.ttf) }
-@font-face { font-family: saira-ec; src: url(../../../assets/font/saira-extra-cond-reg.ttf) }
+@font-face { font-family: open-sans; src: url(/assets/Font/opensans-reg.ttf) }
+@font-face { font-family: saira-ec; src: url(/assets/Font/saira-extra-cond-reg.ttf) }
 
 .resume-wrapper {
   font-family: 'Segoe UI', sans-serif;

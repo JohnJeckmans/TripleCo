@@ -25,16 +25,13 @@ video {
     transform: translate(-50%, -50%);
 }
 .video-overlay {
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba (0, 0, 0, 0.5);
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Main Title */
-@font-face {font-family: opensans-regular; src: url(../assets/Font/OpenSans-Regular.ttf);}
+@font-face {font-family: opensans-regular; src: url(/assets/Font/OpenSans-Regular.ttf);}
 .main-title {
     position: absolute;
     top: 31%;
