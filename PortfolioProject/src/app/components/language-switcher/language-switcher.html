@@ -1,0 +1,34 @@
+@let current = i18n.language();
+<button
+  type="button"
+  class="current"
+  [attr.aria-label]="i18n.t().language.choose + ': ' + current.name"
+  [attr.aria-expanded]="open()"
+  aria-haspopup="true"
+  aria-controls="language-list"
+  (click)="open.set(!open())"
+>
+  <img class="flag" [src]="current.flag" alt="" width="24" height="16" />
+  <span class="code">{{ current.label }}</span>
+  <span class="caret" aria-hidden="true">▾</span>
+</button>
+
+@if (open()) {
+  <ul class="options" id="language-list" [attr.aria-label]="i18n.t().language.choose">
+    @for (language of languages; track language.code) {
+      <li>
+        <button
+          type="button"
+          [lang]="language.htmlLang"
+          [class.active]="language.code === current.code"
+          [attr.aria-current]="language.code === current.code"
+          (click)="choose(language.code)"
+        >
+          <img class="flag" [src]="language.flag" alt="" width="24" height="16" />
+          <span class="code">{{ language.label }}</span>
+          <span class="name">{{ language.name }}</span>
+        </button>
+      </li>
+    }
+  </ul>
+}

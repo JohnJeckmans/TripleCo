@@ -9,6 +9,7 @@ import { routes } from './app.routes';
 
 describe('App (home page)', () => {
   beforeEach(async () => {
+    localStorage.clear();
     await TestBed.configureTestingModule({
       imports: [App],
       providers: [provideRouter(routes)],
@@ -22,9 +23,29 @@ describe('App (home page)', () => {
     return fixture.nativeElement as HTMLElement;
   }
 
-  it('shows the welcome title', async () => {
+  it('starts in English', async () => {
     const page = await render();
+    expect(page.querySelector('#home h1')?.textContent).toContain('Welcome to TripleCo');
+    expect(document.documentElement.lang).toBe('en-GB');
+  });
+
+  it('switches the whole page with the language menu', async () => {
+    const fixture = TestBed.createComponent(App);
+    await fixture.whenStable();
+    const page = fixture.nativeElement as HTMLElement;
+
+    page.querySelector<HTMLButtonElement>('app-language-switcher .current')!.click();
+    await fixture.whenStable();
+    const dutch = [...page.querySelectorAll<HTMLButtonElement>('#language-list button')].find((b) =>
+      b.textContent?.includes('NL'),
+    )!;
+    dutch.click();
+    await fixture.whenStable();
+
     expect(page.querySelector('#home h1')?.textContent).toContain('Welkom bij TripleCo');
+    expect(page.querySelector('.card-title')?.textContent).toContain('Introductie');
+    expect(document.documentElement.lang).toBe('nl-NL');
+    expect(page.querySelector('#language-list')).toBeNull(); // menu closes after choosing
   });
 
   it('has all four sections the menu links to', async () => {

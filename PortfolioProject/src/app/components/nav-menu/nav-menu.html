@@ -6,7 +6,7 @@
   [class.change]="mobileOpen()"
   [attr.aria-expanded]="mobileOpen()"
   aria-controls="mobile-nav"
-  aria-label="Menu"
+  [attr.aria-label]="t().nav.menu"
   (click)="toggleMobile()"
 >
   <div class="bar1"></div>
@@ -18,10 +18,10 @@
 <nav class="mobile-nav" id="mobile-nav" [class.nav-expand]="mobileOpen()">
   <ul class="nav-items">
     <li style="padding-top: 48px"></li>
-    <li><a href="#home" (click)="toggleMobile()">Home</a></li>
-    <li><a href="#about" (click)="toggleMobile()">About</a></li>
-    <li><a href="#projects" (click)="toggleMobile()">Projects</a></li>
-    <li><a href="#contact" (click)="toggleMobile()">Contact</a></li>
+    <li><a href="#home" (click)="toggleMobile()">{{ t().nav.home }}</a></li>
+    <li><a href="#about" (click)="toggleMobile()">{{ t().nav.about }}</a></li>
+    <li><a href="#projects" (click)="toggleMobile()">{{ t().nav.projects }}</a></li>
+    <li><a href="#contact" (click)="toggleMobile()">{{ t().nav.contact }}</a></li>
   </ul>
 </nav>
 
@@ -33,11 +33,11 @@
   (focusin)="sidebarOpen.set(true)"
   (focusout)="sidebarOpen.set(false)"
 >
-  <p class="sidebar-toggle" id="sidebar-toggle" [class.display-none]="sidebarOpen()">Menu</p>
+  <p class="sidebar-toggle" id="sidebar-toggle" [class.display-none]="sidebarOpen()">{{ t().nav.menu }}</p>
   <ul class="sidebar-items desktop-nav" id="desktop-nav" [class.display-none]="!sidebarOpen()">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#home">{{ t().nav.home }}</a></li>
+    <li><a href="#about">{{ t().nav.about }}</a></li>
+    <li><a href="#projects">{{ t().nav.projects }}</a></li>
+    <li><a href="#contact">{{ t().nav.contact }}</a></li>
   </ul>
 </nav>

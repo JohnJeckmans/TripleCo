@@ -1,0 +1,90 @@
+/* Fixed in the top-right corner, above the Resume/Engineering overlays and their menus */
+:host {
+  position: fixed;
+  top: 12px;
+  right: 20px;
+  z-index: 200;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font: inherit;
+  color: white;
+  cursor: pointer;
+  border: 0;
+}
+
+.current {
+  padding: 6px 10px;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+}
+
+.current:hover,
+.current[aria-expanded='true'] {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.flag {
+  display: block;
+  width: 24px;
+  height: 16px;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+.code {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.caret {
+  font-size: 0.8rem;
+}
+
+.options {
+  position: absolute;
+  right: 0;
+  margin: 4px 0 0;
+  padding: 4px 0;
+  list-style: none;
+  min-width: 170px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.options button {
+  width: 100%;
+  padding: 8px 12px;
+  background: none;
+  text-align: left;
+}
+
+.options button:hover,
+.options button:focus-visible {
+  color: rgba(0, 0, 0, 0.85);
+  background-color: #fbfbfb;
+}
+
+.options button.active {
+  font-weight: 600;
+  box-shadow: inset 3px 0 0 rgb(60, 100, 200);
+}
+
+.name {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* Phones and tablets: sit just left of the hamburger menu button */
+@media screen and (max-width: 1080px) {
+  :host {
+    top: 10px;
+    right: 62px;
+  }
+}

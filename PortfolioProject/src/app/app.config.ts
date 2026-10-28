@@ -5,28 +5,29 @@ import {
   provideAppInitializer,
   provideBrowserGlobalErrorListeners,
 } from '@angular/core';
-import { provideRouter, withInMemoryScrolling } from '@angular/router';
+import { provideRouter, TitleStrategy, withInMemoryScrolling } from '@angular/router';
 import { provideServiceWorker } from '@angular/service-worker';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import {
+  faBluesky,
   faCodepen,
-  faFacebook,
   faGithub,
   faInstagram,
   faLinkedin,
   faMedium,
   faXTwitter,
-  faXing,
 } from '@fortawesome/free-brands-svg-icons';
 import { faCircle } from '@fortawesome/free-solid-svg-icons';
 
 import { routes } from './app.routes';
+import { TranslatedTitleStrategy } from './i18n/translated-title';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     // Scroll to #section links (e.g. /resume#experience) and back to the top on page change.
     provideRouter(routes, withInMemoryScrolling({ anchorScrolling: 'enabled', scrollPositionRestoration: 'top' })),
+    { provide: TitleStrategy, useClass: TranslatedTitleStrategy },
     provideServiceWorker('ngsw-worker.js', {
       enabled: !isDevMode(),
       registrationStrategy: 'registerWhenStable:30000',
@@ -38,8 +39,7 @@ export const appConfig: ApplicationConfig = {
         faInstagram,
         faLinkedin,
         faMedium,
-        faXing,
-        faFacebook,
+        faBluesky,
         faXTwitter,
         faCircle,
       );

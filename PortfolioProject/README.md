@@ -40,14 +40,33 @@ src/
     app.html / app.css     Home page: intro, about, projects, contact, footer
     app.routes.ts          The /resume and /engineering pages
     app.config.ts          App setup, including which icons are available
+    i18n/                  All texts in EN / NL / DE, and the language logic
     components/
+      language-switcher/   Flag menu (top-right) for choosing the language
       nav-menu/            Hamburger menu (phones) and hover sidebar (desktop)
       resume/              Resume page
       engineering/         Engineering Solutions page
 ```
 
-To change text, edit the `.html` file for that page. To use a new Font Awesome icon,
-add it to the list in `src/app/app.config.ts`.
+To use a new Font Awesome icon, add it to the list in `src/app/app.config.ts`.
+
+## Languages and texts
+
+The site is available in English, Dutch and German. Visitors pick a language with the flag
+menu in the top-right corner. English is the default, and the site remembers each visitor's choice
+on their device.
+
+All visible text lives in three files, one per language:
+
+```
+src/app/i18n/en.ts   English
+src/app/i18n/nl.ts   Dutch
+src/app/i18n/de.ts   German
+```
+
+To change a text, edit it in all three files. The files must have the same items. If one is
+missing, `npm run build` stops with an error that names the missing item, and `npm test`
+checks that every list has the same number of lines in each language.
 
 ## Deploying to Firebase
 

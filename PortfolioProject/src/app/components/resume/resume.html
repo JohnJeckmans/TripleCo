@@ -5,13 +5,13 @@
     <ul>
         <li class="logo"><a href="#">
         <div class="img-logo">
-            <img class="rounded-img" src="assets/img/mugshot.jpg" alt="John Jeckmans" title="Visit TripleCo" />
+            <img class="rounded-img" src="assets/img/mugshot.jpg" alt="John Jeckmans" [title]="t().common.visitTripleCo" />
         </div></a></li>
-        <li><a href="/resume#intro">About</a></li>
-        <li><a href="/resume#experience">Experience</a></li>
+        <li><a href="/resume#intro">{{ t().common.about }}</a></li>
+        <li><a href="/resume#experience">{{ t().common.experience }}</a></li>
         <!-- <li><a href="/resume#education">Education</a></li> -->
-        <li><a href="/resume#skills">Skills</a></li>
-        <li><a href="/resume#interests">Interests</a></li>
+        <li><a href="/resume#skills">{{ t().resume.skills }}</a></li>
+        <li><a href="/resume#interests">{{ t().resume.interests }}</a></li>
         <!-- <li><a href="/resume#awards">Awards</a></li> -->
     </ul>
 </nav>
@@ -21,19 +21,14 @@
     <h1 class="main-title title"><strong>John
         <span class="blue">Jeckmans</span></strong>
     </h1>
-    <div class="sub-title title">Twente - Netherlands - EU · <br>
+    <div class="sub-title title">{{ t().common.location }} · <br>
         <a href="mailto:info@tripleco.nl">info@TripleCo.nl</a>
     </div>
-    <p class="main-text main">"Bringing ease in transformational changes by creating space!"</p>
+    <p class="main-text main">{{ t().resume.quote }}</p>
 
-    <p class="main-text main">   I have over 40 years of international experience in B2B industrial surroundings. Started with a technical foundation in operations & maintenance. Have designed, planned, build and commisioned complete production facilities. Ended up in product management, marketing & sales. Both executive as well as C-level. And started TripleCo in 2004.
-    </p>
-    
-    <p class="main-text main">        
-        Have worked in and with industries like (petro-)chemicals; power generation conventional, renewable and nuclear; marine commercial and navy; automotive mechanical manufacturing, large water transport; fire fighting equipment; waste water & drinking water sector; pulp & paper </p>
-    <p class="main-text main"> From 2004, my aim is predominantly on assisting technical start-ups, SME's, both local, national and international.
-   
-</p>
+    @for (paragraph of t().resume.intro; track $index) {
+    <p class="main-text main">{{ paragraph }}</p>
+    }
 
     <ul class="social-icons">
         <li class="icons no-margin-left">
@@ -90,25 +85,15 @@
 <!-- Experience  ------------------------------------------------------------>
 <section id="experience">
     <div class="experience-content content-padding">
-    <h2 class="section-title title">Experience</h2>
+    <h2 class="section-title title">{{ t().common.experience }}</h2>
 
     <div class="item-wrapper">
         <article class="item">
-        <h3 class="item-title title">Business Change Catalyst & Executioner</h3>
+        <h3 class="item-title title">{{ t().resume.experience.title }}</h3>
         <h4 class="item-subtitle title">TripleCo</h4>
-        <p class="item-text main">Executive & Organisational Coaching, based on the so-called Organisational Development Approach.</p>
-        <p class="item-text main">Growth Financing.</p>
-        <p class="item-text main">Strategic Consulting, including business plan development, marketing & sales strategy development.</p>
-        <p class="item-text main">(New) business development, alliances both horizontal as well as vertical.</p>
-        <p class="item-text main">Training, Coaching & counseling of individuals & teams.</p>
-        <p class="item-text main">Change management & processes.</p>
-        <p class="item-text main">ERP implementation.</p>
-        <p class="item-text main">Data driven process valuations.</p>
-        <p class="item-text main">Visualisation.</p>
-        <p class="item-text main">Pain in the *ss, if need be.</p>
-        <p class="item-text main">Start-up business development</p>
-        <p class="item-text main">All via a very practical, down to earth, hands-on implementation.         
-                An active partner in a network of self-employed professionals in the same line of business.</p>
+        @for (item of t().resume.experience.items; track $index) {
+        <p class="item-text main">{{ item }}</p>
+        }
         </article>
         <!-- <div class="item-right">
         <p class="item-date main red align"> Nov 2004 - Present</p>
@@ -194,7 +179,7 @@
 <!-- Skils ------------------------------------------------------------------>
 <section id="skills">
     <div class="skills-content content-padding">
-    <h2 class="section-title title">Skills</h2>
+    <h2 class="section-title title">{{ t().resume.skills }}</h2>
     <ul class="skill-icons red">
         <!-- <li class="icons no-margin-left">
         <fa-icon [icon]="['far', 'gem']" class="skill-icon" id="diamond" title="Sketch"></fa-icon>
@@ -237,49 +222,13 @@
        
     </div> -->
  
-    <h4 class="item-subtitle title" >Project (selection)</h4>
+    <h4 class="item-subtitle title">{{ t().resume.projectsTitle }}</h4>
     <div class="list">
+        @for (project of t().resume.projects; track $index) {
         <div class="list-item">
-             <!-- <fa-icon [icon]="['fas', 'certificate']" class="trophy"></fa-icon> -->
-            <p class="item-text main">Data visualisation and BI Dashboard development</p>
+            <p class="item-text main">{{ project }}</p>
         </div>
-        <div class="list-item">
-            <!-- <fa-icon [icon]="['fas', 'certificate']" class="trophy"></fa-icon> -->
-            <p class="item-text main">Business Development for programmable & intelligent professional LED lighting systems</p>
-        </div>
-        <div class="list-item">
-            <!-- <fa-icon [icon]="['fas', 'certificate']" class="trophy"></fa-icon> -->
-            <p class="item-text main">Strategic Procurement Department (corporate NL)</p>
-        </div>
-        <div class="list-item">
-            <!-- <fa-icon [icon]="['fas', 'certificate']" class="trophy"></fa-icon> -->
-            <p class="item-text main"> Merger process consultation (renewable energy sector), management & control systems (finance, QA&QC) (Germany)</p>
-        </div>  
-        <div class="list-item">
-            <!-- <fa-icon [icon]="['fas', 'certificate']" class="trophy"></fa-icon> -->
-            <p class="item-text main"> Customerside ERP Implementation; strategy to processes, data cleansing, building a product configurator, (transfer) pricing), technical sales manuals, ISO 9000 system, complaint management, migration of financials, CRM application</p>
-        </div>  
-          
-        <div class="list-item">
-            <!-- <fa-icon [icon]="['fas', 'certificate']" class="trophy"></fa-icon> -->
-            <p class="item-text main"> Divestment of a family owned/run SME (two owners)</p>
-        </div>  
-         
-        <div class="list-item">
-            <!-- <fa-icon [icon]="['fas', 'certificate']" class="trophy"></fa-icon> -->
-            <p class="item-text main"> Reorganisation company processes, coachen of staff and owner, project/contract managenent equipment supplies food, offshore. </p>
-               
-        </div>  
-        <div class="list-item">
-            <!-- <fa-icon [icon]="['fas', 'certificate']" class="trophy"></fa-icon> -->
-            <p class="item-text main"> Innovation Adviser Syntens in built environment (sustainability, collaboration in supply chain, coaching) </p>
-          
-        </div>  
-        <div class="list-item">
-            <!-- <fa-icon [icon]="['fas', 'certificate']" class="trophy"></fa-icon> -->
-            <p class="item-text main"> Inventarisation and development plan change project electronics manufacturer(Taiwan).
- </p>
-        </div>  
+        }
     </div>
 
 
@@ -289,9 +238,10 @@
 <!-- Interests -------------------------------------------------------------->
 <section id="interests">
     <div class="interests-content content-padding">
-    <h2 class="section-title title">Interests</h2>
-    <p class="item-text main">Getting to know more idependent professionals worldwide, but at least in Netherlands, Germany.</p>
-    <p class="item-text main">Everything related to new innovations, basic research for a sustainable future of all.</p>
+    <h2 class="section-title title">{{ t().resume.interests }}</h2>
+    @for (item of t().resume.interestItems; track $index) {
+    <p class="item-text main">{{ item }}</p>
+    }
     </div>
 </section>
 <!-- Awards ----------------------------------------------------------------->

@@ -1,0 +1,125 @@
+// Nederlandse teksten. CONCEPT (oktober 2026): vertaald vanuit en.ts, nog door John te controleren.
+import type { Translations } from './en';
+
+export const nl: Translations = {
+  titles: {
+    home: 'TripleCo Solutions',
+    resume: 'John Jeckmans | TripleCo',
+    engineering: 'Engineering Solutions | TripleCo',
+  },
+  language: {
+    choose: 'Kies taal',
+  },
+  common: {
+    sendEmail: 'Klik om te e-mailen',
+    location: 'Twente - Nederland - EU',
+    visitTripleCo: 'Bezoek TripleCo',
+    about: 'Over',
+    experience: 'Ervaring',
+  },
+  nav: {
+    menu: 'Menu',
+    home: 'Home',
+    about: 'Over',
+    projects: 'Projecten',
+    contact: 'Contact',
+  },
+  home: {
+    title: 'Welkom bij TripleCo',
+    aboutTitle: 'Introductie',
+    aboutImageAlt: 'Foto van mij',
+    tagline: 'Verandering makkelijker maken door ruimte te creëren!',
+    callToAction: 'Wilt u dingen in beweging zetten? Laten we praten.',
+    moreInfo: 'Klik voor meer informatie',
+    projectsTitle: 'Klik om projecten & diensten te bekijken',
+    projects: {
+      solutionsAlt: 'Algemene oplossingen',
+      lightingTitle: 'Verlichting door TripleCo Solutions',
+      lightingAlt: 'Verlichting',
+      buyAtBol: 'Kopen bij Bol.com',
+      webshopTitle: 'Webshop (in aanbouw)',
+      webshopAlt: 'Project',
+      viewFesh: 'Bekijk Fesh Store',
+      feshReferral: 'Verwijzing fesh.store',
+      engineeringTitle: 'Engineering Solutions',
+      engineeringAlt: 'Engineering',
+      viewProject: 'Bekijk project',
+    },
+    businessCardsAlt: 'Visitekaartjes',
+  },
+  resume: {
+    skills: 'Vaardigheden',
+    interests: 'Interesses',
+    quote: '"Verandering makkelijker maken door ruimte te creëren!"',
+    intro: [
+      'Ik heb ruim 40 jaar internationale ervaring in een industriële B2B-omgeving. Begonnen met een technische basis in bedrijfsvoering en onderhoud. Ik heb complete productiefaciliteiten ontworpen, gepland, gebouwd en in bedrijf gesteld. Daarna terechtgekomen in productmanagement, marketing en sales, zowel uitvoerend als op C-niveau. In 2004 ben ik TripleCo gestart.',
+      'Ik heb gewerkt in en met sectoren als de (petro)chemie; energieopwekking (conventioneel, duurzaam en nucleair); koopvaardij en marine; automotive en mechanische productie; grootschalig watertransport; brandbestrijdingsmaterieel; afvalwater en drinkwater; papier en karton.',
+      'Sinds 2004 richt ik mij vooral op het begeleiden van technische start-ups en mkb-bedrijven, zowel lokaal, nationaal als internationaal.',
+    ],
+    experience: {
+      title: 'Business Change Catalyst & Executioner',
+      items: [
+        'Executive- en organisatiecoaching, gebaseerd op de zogeheten Organisatieontwikkelingsbenadering.',
+        'Groeifinanciering.',
+        'Strategisch advies, waaronder het opstellen van ondernemingsplannen en marketing- en salesstrategieën.',
+        '(Nieuwe) businessontwikkeling, allianties zowel horizontaal als verticaal.',
+        'Training, coaching en begeleiding van personen en teams.',
+        'Verandermanagement en processen.',
+        'ERP-implementatie.',
+        'Datagedreven procesanalyses.',
+        'Visualisatie.',
+        'Een luis in de pels, als het nodig is.',
+        'Businessontwikkeling voor start-ups',
+        'Alles op een zeer praktische, nuchtere, hands-on manier uitgevoerd. Actieve partner in een netwerk van zelfstandige professionals in dezelfde branche.',
+      ],
+    },
+    projectsTitle: 'Projecten (selectie)',
+    projects: [
+      'Datavisualisatie en ontwikkeling van BI-dashboards',
+      'Businessontwikkeling voor programmeerbare en intelligente professionele ledverlichtingssystemen',
+      'Afdeling Strategische Inkoop (corporate NL)',
+      'Advies bij een fusieproces (sector duurzame energie), management- en controlesystemen (financiën, QA/QC) (Duitsland)',
+      'ERP-implementatie aan klantzijde: van strategie naar processen, data opschonen, een productconfigurator bouwen, (verreken)prijzen, technische verkoophandleidingen, ISO 9000-systeem, klachtenmanagement, migratie van de financiële administratie, CRM-applicatie',
+      'Verkoop van een familiebedrijf in het mkb (twee eigenaren)',
+      'Reorganisatie van bedrijfsprocessen, coaching van medewerkers en eigenaar, project- en contractmanagement voor apparatuurleveringen in de voedingsmiddelenindustrie en offshore.',
+      'Innovatieadviseur bij Syntens in de gebouwde omgeving (duurzaamheid, samenwerking in de keten, coaching)',
+      'Inventarisatie en ontwikkelplan voor een veranderproject bij een elektronicafabrikant (Taiwan).',
+    ],
+    interestItems: [
+      'Meer zelfstandige professionals leren kennen, wereldwijd, maar in ieder geval in Nederland en Duitsland.',
+      'Alles wat te maken heeft met nieuwe innovaties en fundamenteel onderzoek voor een duurzame toekomst voor iedereen.',
+    ],
+  },
+  engineering: {
+    quote: '"Structurele oplossingen voor (extra) engineeringcapaciteit!"',
+    intro: [
+      'Wij maken deel uit van het zakelijke netwerk "Dutch Company Doctors", gespecialiseerd in verandermanagement, procesontwikkeling, matchmaking, outsourcing, training en co-partnerschappen in diverse sectoren.',
+      'Dankzij ons wereldwijde netwerk en de ervaring die we de afgelopen decennia hebben opgedaan, kunnen wij u ondersteunen bij het structureel uitbesteden van uw engineeringactiviteiten.',
+    ],
+    services: {
+      title: 'ENGINEERINGDIENSTEN',
+      subtitle: 'Zowel outsourcing als insourcing?',
+      items: [
+        'Combinatie van engineeringoplossingen in een productieomgeving',
+        'Kostenefficiënt',
+        'Kortere productontwikkelingscyclus.',
+        'Flexibele capaciteit, werken in meerdere ploegen',
+        'Ervaring met PLM-omgevingen',
+        'Hoog beveiligingsniveau - gegevensbescherming en vertrouwelijkheid',
+      ],
+    },
+    team: {
+      title: 'ENGINEERINGTEAM',
+      items: [
+        'Een talentenpool van meer dan 50 gekwalificeerde engineers',
+        'Kwalificaties: postdoctorale ingenieurs, ingenieurs en gediplomeerde engineers met kennis van meerdere CAD-pakketten.',
+        'Software-infrastructuur: Pro-E, Inventor, UG NX, SolidWorks en AutoCAD, met 30 werkstations.',
+      ],
+    },
+    support: {
+      title: 'Onze ondersteuning in de EU',
+      subtitle: 'uw organisatie voorbereiden & begeleiden',
+      items: ['', '', '', 'op een zeer praktische, nuchtere, hands-on manier.'],
+    },
+  },
+};

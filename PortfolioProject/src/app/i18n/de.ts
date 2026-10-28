@@ -1,0 +1,125 @@
+// Deutsche Texte. ENTWURF (Oktober 2026): aus en.ts übersetzt, noch von John zu prüfen.
+import type { Translations } from './en';
+
+export const de: Translations = {
+  titles: {
+    home: 'TripleCo Solutions',
+    resume: 'John Jeckmans | TripleCo',
+    engineering: 'Engineering Solutions | TripleCo',
+  },
+  language: {
+    choose: 'Sprache wählen',
+  },
+  common: {
+    sendEmail: 'Klicken, um eine E-Mail zu senden',
+    location: 'Twente - Niederlande - EU',
+    visitTripleCo: 'TripleCo besuchen',
+    about: 'Über uns',
+    experience: 'Erfahrung',
+  },
+  nav: {
+    menu: 'Menü',
+    home: 'Start',
+    about: 'Über uns',
+    projects: 'Projekte',
+    contact: 'Kontakt',
+  },
+  home: {
+    title: 'Willkommen bei TripleCo',
+    aboutTitle: 'Vorstellung',
+    aboutImageAlt: 'Foto von mir',
+    tagline: 'Veränderung leichter machen, indem wir Raum schaffen!',
+    callToAction: 'Möchten Sie etwas in Bewegung setzen? Sprechen wir darüber.',
+    moreInfo: 'Klicken Sie für mehr Informationen',
+    projectsTitle: 'Klicken Sie, um Projekte & Leistungen anzusehen',
+    projects: {
+      solutionsAlt: 'Allgemeine Lösungen',
+      lightingTitle: 'Beleuchtung von TripleCo Solutions',
+      lightingAlt: 'Beleuchtung',
+      buyAtBol: 'Bei Bol.com kaufen',
+      webshopTitle: 'Webshop (im Aufbau)',
+      webshopAlt: 'Projekt',
+      viewFesh: 'Fesh Store ansehen',
+      feshReferral: 'Empfehlung fesh.store',
+      engineeringTitle: 'Engineering Solutions',
+      engineeringAlt: 'Engineering',
+      viewProject: 'Projekt ansehen',
+    },
+    businessCardsAlt: 'Visitenkarten',
+  },
+  resume: {
+    skills: 'Kompetenzen',
+    interests: 'Interessen',
+    quote: '„Veränderung leichter machen, indem wir Raum schaffen!“',
+    intro: [
+      'Ich verfüge über mehr als 40 Jahre internationale Erfahrung im industriellen B2B-Umfeld. Begonnen habe ich mit einer technischen Grundlage in Betrieb und Instandhaltung. Ich habe komplette Produktionsanlagen konzipiert, geplant, gebaut und in Betrieb genommen. Später kamen Produktmanagement, Marketing und Vertrieb hinzu, sowohl operativ als auch auf C-Level. 2004 habe ich TripleCo gegründet.',
+      'Ich habe in und mit Branchen gearbeitet wie (Petro-)Chemie; Energieerzeugung (konventionell, erneuerbar und nuklear); Handels- und Marineschifffahrt; Automobil- und Maschinenbau; großer Wassertransport; Feuerwehrtechnik; Abwasser- und Trinkwasserwirtschaft; Zellstoff und Papier.',
+      'Seit 2004 liegt mein Schwerpunkt vor allem auf der Unterstützung technischer Start-ups und KMU, lokal, national und international.',
+    ],
+    experience: {
+      title: 'Business Change Catalyst & Executioner',
+      items: [
+        'Executive- und Organisationscoaching, basierend auf dem sogenannten Organisationsentwicklungsansatz.',
+        'Wachstumsfinanzierung.',
+        'Strategieberatung, einschließlich Erstellung von Businessplänen sowie Marketing- und Vertriebsstrategien.',
+        '(Neue) Geschäftsentwicklung, Allianzen sowohl horizontal als auch vertikal.',
+        'Training, Coaching und Beratung von Einzelpersonen und Teams.',
+        'Change-Management und Prozesse.',
+        'ERP-Einführung.',
+        'Datengestützte Prozessbewertungen.',
+        'Visualisierung.',
+        'Unbequemer Mahner, wenn nötig.',
+        'Geschäftsentwicklung für Start-ups',
+        'Alles mit einer sehr praxisnahen, bodenständigen, hands-on Umsetzung. Aktiver Partner in einem Netzwerk selbstständiger Fachleute aus derselben Branche.',
+      ],
+    },
+    projectsTitle: 'Projekte (Auswahl)',
+    projects: [
+      'Datenvisualisierung und Entwicklung von BI-Dashboards',
+      'Geschäftsentwicklung für programmierbare und intelligente professionelle LED-Beleuchtungssysteme',
+      'Abteilung Strategischer Einkauf (Konzern NL)',
+      'Beratung bei einem Fusionsprozess (Branche erneuerbare Energien), Management- und Kontrollsysteme (Finanzen, QA/QC) (Deutschland)',
+      'ERP-Einführung auf Kundenseite: von der Strategie zu den Prozessen, Datenbereinigung, Aufbau eines Produktkonfigurators, (Verrechnungs-)Preise, technische Vertriebshandbücher, ISO-9000-System, Reklamationsmanagement, Migration der Finanzbuchhaltung, CRM-Anwendung',
+      'Verkauf eines inhabergeführten Familien-KMU (zwei Eigentümer)',
+      'Reorganisation von Unternehmensprozessen, Coaching von Mitarbeitern und Inhaber, Projekt- und Vertragsmanagement für Anlagenlieferungen in der Lebensmittelindustrie und im Offshore-Bereich.',
+      'Innovationsberater bei Syntens im Bauwesen (Nachhaltigkeit, Zusammenarbeit in der Lieferkette, Coaching)',
+      'Bestandsaufnahme und Entwicklungsplan für ein Veränderungsprojekt bei einem Elektronikhersteller (Taiwan).',
+    ],
+    interestItems: [
+      'Weitere selbstständige Fachleute kennenlernen, weltweit, aber mindestens in den Niederlanden und in Deutschland.',
+      'Alles rund um neue Innovationen und Grundlagenforschung für eine nachhaltige Zukunft für alle.',
+    ],
+  },
+  engineering: {
+    quote: '„Strukturelle Lösungen für (zusätzliche) Engineering-Kapazität!“',
+    intro: [
+      'Wir sind Teil des Unternehmensnetzwerks „Dutch Company Doctors“, spezialisiert auf Change-Management, Prozessentwicklung, Matchmaking, Outsourcing, Training und Kooperationspartnerschaften in verschiedenen Bereichen.',
+      'Dank unseres weltweiten Netzwerks und der in den letzten Jahrzehnten gesammelten Erfahrung können wir Sie beim strukturellen Outsourcing Ihrer Engineering-Aktivitäten unterstützen.',
+    ],
+    services: {
+      title: 'ENGINEERING-DIENSTLEISTUNGEN',
+      subtitle: 'Outsourcing und Insourcing zugleich?',
+      items: [
+        'Kombination von Engineering-Lösungen in einer Fertigungsumgebung',
+        'Kosteneffizient',
+        'Kürzerer Produktentwicklungszyklus.',
+        'Flexible Kapazität, Mehrschichtbetrieb',
+        'Erfahrung mit PLM-Umgebungen',
+        'Hohes Sicherheitsniveau - Datenschutz und Vertraulichkeit',
+      ],
+    },
+    team: {
+      title: 'ENGINEERING-TEAM',
+      items: [
+        'Ein Talentpool von über 50 qualifizierten Ingenieuren',
+        'Qualifikationen: Ingenieure mit Postgraduiertenabschluss, Ingenieure und Diplom-Ingenieure mit Kenntnissen in mehreren CAD-Programmen.',
+        'Software-Infrastruktur: Pro-E, Inventor, UG NX, SolidWorks und AutoCAD mit 30 Arbeitsplätzen.',
+      ],
+    },
+    support: {
+      title: 'Unsere Unterstützung in der EU',
+      subtitle: 'Ihre Organisation vorbereiten & begleiten',
+      items: ['', '', '', 'auf eine sehr praxisnahe, bodenständige, hands-on Arbeitsweise.'],
+    },
+  },
+};
