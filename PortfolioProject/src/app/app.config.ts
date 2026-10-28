@@ -12,9 +12,7 @@ import {
   faBluesky,
   faCodepen,
   faGithub,
-  faInstagram,
   faLinkedin,
-  faMedium,
   faXTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 import { faCircle } from '@fortawesome/free-solid-svg-icons';
@@ -36,10 +34,8 @@ export const appConfig: ApplicationConfig = {
       inject(FaIconLibrary).addIcons(
         faGithub,
         faCodepen,
-        faInstagram,
-        faLinkedin,
-        faMedium,
-        faBluesky,
+              faLinkedin,
+              faBluesky,
         faXTwitter,
         faCircle,
       );
