@@ -18,7 +18,7 @@ export const nl: Translations = {
   },
   hero: {
     photoAlt: 'Portret van John Jeckmans',
-    headline: 'Board Advisor · Internationaal industrieel bestuurder',
+    headline: 'Board Advisor · Internationaal industrieel leider',
     focus: 'Strategie, transformatie & groei',
     location: 'Twente, Nederland · actief in heel Europa',
     emailMe: 'Mail mij',
@@ -28,9 +28,9 @@ export const nl: Translations = {
   approach: {
     title: 'Aanpak',
     paragraphs: [
-      'Ik breng internationale leiderschapservaring mee uit industriële, energie- en technologiegedreven omgevingen, met de focus op strategie, transformatie en duurzame groei.',
-      'Ik ben vooral van waarde wanneer organisaties te maken hebben met strategische complexiteit, veranderende markten, stagnerende groei, of de noodzaak om leiderschap, operatie en langetermijnkoers op één lijn te brengen.',
-      'Via TripleCo ondersteun ik raden van bestuur en commissarissen, eigenaren en managementteams die ervaren oordeelsvermogen nodig hebben op het gebied van groei, transformatie, governance en strategische koers.',
+      'Ik breng internationale leiderschapservaring mee binnen industriële, energie- en technologiegedreven omgevingen, met een focus op strategie, transformatie en duurzame groei.',
+      'Ik ben met name effectief in situaties waarin organisaties te maken hebben met strategische complexiteit, veranderende marktomstandigheden, stagnerende groei, of de behoefte om leiderschap, operaties en langetermijnrichting op één lijn te krijgen.',
+      'Vanuit TripleCo ondersteun ik raden van bestuur, eigenaren en directieteams die behoefte hebben aan ervaren oordeelsvorming op het gebied van groei, transformatie, governance en strategische richting.',
     ],
     quote: 'Helderheid boven complexiteit, inhoud boven retoriek, resultaat boven presentatie.',
   },
@@ -40,7 +40,7 @@ export const nl: Translations = {
     items: [
       {
         title: 'Bestuursadvies & governance',
-        text: 'Ervaren oordeel over strategische koers, kwaliteit van besluitvorming en verantwoording, gebaseerd op bestuurs- en venturecapitalrollen.',
+        text: 'Ervaren oordeelsvorming over strategische koers, besluitvormingskwaliteit en verantwoording, gefundeerd op rollen in boards en durfkapitaal.',
       },
       {
         title: 'Strategie & transformatie',
@@ -48,11 +48,11 @@ export const nl: Translations = {
       },
       {
         title: 'Groei & business development',
-        text: 'Internationale businessontwikkeling, allianties en het commercialiseren van nieuwe technologie.',
+        text: 'Internationale business development, allianties en de commercialisering van nieuwe technologie.',
       },
       {
-        title: 'Leiderschap op één lijn',
-        text: 'Leiderschap, operatie en stakeholders op één lijn brengen, over organisaties, disciplines en landsgrenzen heen.',
+        title: 'Leiderschapsalignment',
+        text: 'Het op één lijn brengen van leiderschap, operaties en stakeholders over organisaties, disciplines en landsgrenzen heen.',
       },
     ],
   },
@@ -71,21 +71,21 @@ export const nl: Translations = {
         org: 'TripleCo',
         period: '2004 – heden',
         place: 'Europa',
-        text: 'Onafhankelijk platform voor strategisch advies, businessontwikkeling en ondersteuning bij transformatie in industriële en groeigerichte omgevingen.',
+        text: 'Onafhankelijk platform voor strategisch advies, business development en transformatiebegeleiding in industriële en groei-georiënteerde omgevingen.',
       },
       {
         role: 'Regional Director',
         org: 'The Alpha Group International',
         period: '2014 – 2021',
         place: 'Nederland, België, Luxemburg, Duitsland',
-        text: 'Leiding over intervisiegroepen van CEO’s en ondernemers rond opschaling, winstgevendheid, leiderschap en koers van het bedrijf.',
+        text: 'Leiden van peer-advisory-groepen (klankbordgroepen) van CEO’s en ondernemers op het gebied van schaalvergroting, winstgevendheid, leiderschapsalignment en bedrijfsrichting.',
       },
       {
         role: 'Partner',
         org: 'Dutch Executive Search',
         period: '2011 – 2018',
         place: 'Nederland',
-        text: 'Werving van senior executives, met de nadruk op leiderschapsbeoordeling, opvolging en de juiste match.',
+        text: 'Werving en selectie van senior executives, met een focus op leiderschapsassessment, opvolging en executive fit.',
       },
       {
         role: 'CEO',
@@ -120,7 +120,7 @@ export const nl: Translations = {
   },
   contact: {
     title: 'Contact',
-    text: 'Wilt u dingen in beweging zetten? Laten we praten.',
+    text: 'Klaar om plannen in beweging te zetten? Laten we kennismaken.',
     email: 'E-mail',
     saveContactHint: 'Zet mijn gegevens in uw telefoon of adresboek.',
     follow: 'Volg mij',
