@@ -1,32 +1,34 @@
-/* Fixed in the top-right corner, above the Resume/Engineering overlays and their menus */
+/* Fixed in the top-right corner. Same look as the Menu button (top-left); tokens live in src/styles.css */
 :host {
   position: fixed;
-  top: 12px;
-  right: 20px;
+  top: var(--space-3);
+  right: var(--space-5);
   z-index: 200;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: var(--font-body);
 }
 
 button {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--space-2);
   font: inherit;
-  color: white;
+  color: #fff;
   cursor: pointer;
   border: 0;
 }
 
 .current {
-  padding: 6px 10px;
+  min-height: 40px;
+  padding: 0 var(--space-3);
   font-size: 1rem;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 4px;
+  background-color: var(--control-bg);
+  border-radius: var(--radius);
+  transition: background-color 0.2s;
 }
 
 .current:hover,
 .current[aria-expanded='true'] {
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: var(--control-bg-strong);
 }
 
 .flag {
@@ -39,41 +41,45 @@ button {
 
 .code {
   font-weight: 600;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
 }
 
 .caret {
   font-size: 0.8rem;
+  transition: transform 0.2s;
 }
+.current[aria-expanded='true'] .caret { transform: rotate(180deg); }
 
 .options {
   position: absolute;
   right: 0;
-  margin: 4px 0 0;
-  padding: 4px 0;
+  margin: var(--space-1) 0 0;
+  padding: var(--space-1) 0;
   list-style: none;
-  min-width: 170px;
-  background-color: rgba(0, 0, 0, 0.9);
-  border-radius: 4px;
+  min-width: 180px;
+  background-color: var(--control-bg-strong);
+  border-radius: var(--radius);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .options button {
   width: 100%;
-  padding: 8px 12px;
+  min-height: 44px;
+  padding: 0 var(--space-4);
   background: none;
   text-align: left;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .options button:hover,
 .options button:focus-visible {
-  color: rgba(0, 0, 0, 0.85);
+  color: var(--ink);
   background-color: #fbfbfb;
 }
 
+/* Current language: same marker as the current section in the menu */
 .options button.active {
-  font-weight: 600;
-  box-shadow: inset 3px 0 0 rgb(60, 100, 200);
+  box-shadow: inset 3px 0 0 var(--accent-light);
 }
 
 .name {
@@ -81,12 +87,15 @@ button {
   opacity: 0.85;
 }
 
-/* Phones and tablets: sit just left of the hamburger menu button */
+/* Phones and tablets: sit just left of the hamburger button (40px + 8px gap) */
 @media screen and (max-width: 1080px) {
   :host {
-    top: 12px;
-    right: 70px;
+    right: calc(var(--space-5) + 40px + var(--space-2));
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .current, .caret, .options button { transition: none; }
 }
 
 /* Not needed on paper */

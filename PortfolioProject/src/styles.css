@@ -1,4 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styles: fonts and design tokens shared by the page, the menu and the language switcher */
+
+@font-face { font-family: open-sans; src: url(/assets/Font/opensans-reg.ttf); font-weight: 400; font-display: swap; }
+/* Real semibold (Open Sans, SIL Open Font License: assets/Font/OFL-OpenSans.txt) for every font-weight: 600 */
+@font-face { font-family: open-sans; src: url(/assets/Font/opensans-semibold.ttf); font-weight: 600 700; font-display: swap; }
+@font-face { font-family: saira-ec; src: url(/assets/Font/saira-extra-cond-reg.ttf); font-display: swap; }
+
+:root {
+  /* Colours */
+  --accent: rgb(60, 100, 200);
+  --accent-dark: rgb(40, 75, 165);
+  --accent-light: #8fb0ff;
+  --ink: #1d232a;
+  --muted: #5f6b77;
+  --line: #dde2e8;
+  --soft: #f4f6f9;
+  --dark: #12161b;
+  --control-bg: rgba(0, 0, 0, 0.65);
+  --control-bg-strong: rgba(18, 22, 27, 0.95);
+
+  /* Type */
+  --font-body: open-sans, 'Segoe UI', system-ui, sans-serif;
+  --font-display: saira-ec, 'Arial Narrow', sans-serif;
+
+  /* Spacing scale (4px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  --radius: 4px;
+  --measure: 68ch; /* comfortable line length for running text */
+}
+
+/* One focus style for every link and button: visible feedback for keyboard users */
+:focus-visible {
+  outline: 3px solid var(--accent-light);
+  outline-offset: 2px;
+}
 
 /* Printing / PDF: A4 with modest margins; no lone lines at page breaks */
 @page { size: A4; margin: 12mm; }

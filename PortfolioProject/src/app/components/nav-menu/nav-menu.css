@@ -1,157 +1,141 @@
-a, li { text-decoration: none ;}
-.desktop-nav {display: initial; }
-.display-none {display: none;}
-#menu-bars {display: none;}
-#mobile-nav {display: none;}
+/* Menu controls share their look with the language switcher (top-right):
+   same dark backing, height, font, hover and "current" marker. Tokens live in src/styles.css. */
 
-/* Links fill their menu item and take its colour (hover included) */
-.sidebar-items a, .nav-items a {display: block; color: inherit;}
+.display-none { display: none !important; }
+#menu-bars, .mobile-nav { display: none; }
 
-/* Hamburger is a real <button> (keyboard + screen reader friendly); dark backing keeps it visible on light sections */
-.menu-container {background: rgba(0,0,0,.6); border: 0; border-radius: 4px; padding: 0 6px;}
+button { font: inherit; color: #fff; border: 0; cursor: pointer; }
 
+/* Menu links: one style for the desktop sidebar and the mobile menu */
+.sidebar-items, .nav-items { list-style: none; margin: 0; padding: var(--space-1) 0; }
+.sidebar-items a, .nav-items a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 var(--space-4);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+.sidebar-items a:hover, .nav-items a:hover,
+.sidebar-items a:focus-visible, .nav-items a:focus-visible {
+  color: var(--ink);
+  background-color: #fbfbfb;
+}
+/* "You are here": the section on screen */
+.sidebar-items a.active, .nav-items a.active { box-shadow: inset 3px 0 0 var(--accent-light); }
+
+/* ---------- Desktop: Menu button top-left, links drop down on hover or focus ---------- */
 .sidebar-container {
-    position: fixed;
-    display: initial;
-    height: 30vh;
-    width: 350px;
-    z-index: 10;
-    /* background-color: dodgerblue;  */
+  position: fixed;
+  top: var(--space-3);
+  left: var(--space-5);
+  z-index: 150;
 }
 
 .sidebar-toggle {
-    text-transform: uppercase;
-    font-size: 2rem;
-    font-family: 'Segoe UI', sans-serif;
-    color: white;
-    background-color: rgba(0,0,0,.5);
-    width: 112px;
-    margin: 40px;
-    padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 40px;
+  padding: 0 var(--space-3);
+  border-radius: var(--radius);
+  background-color: var(--control-bg);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background-color 0.2s;
+}
+.sidebar-toggle:hover, .sidebar-toggle[aria-expanded='true'] { background-color: var(--control-bg-strong); }
+
+/* Small three-line icon, drawn with borders */
+.bars {
+  width: 16px;
+  height: 2px;
+  background: currentColor;
+  box-shadow: 0 -5px 0 currentColor, 0 5px 0 currentColor;
 }
 
 .sidebar-items {
+  position: absolute;
+  min-width: 220px;
+  margin-top: var(--space-1);
+  border-radius: var(--radius);
+  background-color: var(--control-bg-strong);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- Phones and tablets: hamburger top-right, menu slides down ---------- */
+@media screen and (max-width: 1080px) {
+  .sidebar-container { display: none; }
+  #menu-bars { display: flex; }
+  .mobile-nav { display: block; }
+
+  .menu-container {
     position: fixed;
-    z-index: 10;
-    list-style: none;
-    font-size: 3rem;
+    top: var(--space-3);
+    right: var(--space-5);
+    z-index: 160;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: var(--radius);
+    background-color: var(--control-bg);
+  }
+  .menu-container:hover, .menu-container.change { background-color: var(--control-bg-strong); }
+
+  .bar1, .bar2, .bar3 {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #fff;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  /* Turns into an X while open */
+  .change .bar1 { transform: translateY(7px) rotate(45deg); }
+  .change .bar2 { opacity: 0; }
+  .change .bar3 { transform: translateY(-7px) rotate(-45deg); }
+
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 155;
+    padding: 64px 0 var(--space-4);
+    background-color: var(--control-bg-strong);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-100%);
+    visibility: hidden;
+    transition: transform 0.3s ease, visibility 0s linear 0.3s;
+  }
+  .nav-expand {
+    transform: none;
+    visibility: visible;
+    transition: transform 0.3s ease;
+  }
+  .nav-items a { justify-content: center; min-height: 48px; font-size: 1.05rem; }
+  /* Centred links: a side bar would sit far from the text, so mark the current section by colour */
+  .nav-items a.active { box-shadow: none; color: var(--accent-light); }
+  .nav-items a.active:hover, .nav-items a.active:focus-visible { color: var(--ink); }
 }
 
-.sidebar-items li {
-    text-transform: uppercase;
-    font-family: 'Segoe UI', sans-serif;
-    cursor: pointer;
-    padding: 2px 14px 5px;
-    margin-bottom: 20px;
-    color: white;
-    background-color: rgba(0,0,0,.5);
+@media (prefers-reduced-motion: reduce) {
+  .mobile-nav, .nav-expand, .bar1, .bar2, .bar3 { transition: none; }
 }
 
-.sidebar-items li:hover {
-    color: rgba(0,0,0,.85);
-    background-color: #fbfbfb;
-    transition: .3s;
-}
-
-
-/* -----------------Media Queries --------------------- */
-
-/* Mobile Navigation */
-/* @media screen and (max-width: 600px) {
-    .sidebar-container{height: 90px;width: 190px;}
-    .sidebar-toggle {margin: 20px; padding: 2px 14px 5px; width: 120px;}
-    .sidebar-items {font-size: 2rem; top: -12px;left: -20px;}
-} */
-
-@media screen and (max-width: 1080px){
-    .sidebar-container, .sidebar-toggle, .desktop-nav {display: none;}
-    #menu-bars {display: initial;}
-    #mobile-nav {display: initial;}
-
-    /* Navigation */
-    .mobile-nav {
-        position: fixed;
-        top: -300px;
-        left: -50px;
-        width: 112%;
-        z-index: 10;
-        transition: 0.5s ease;
-    }
-
-    .nav-expand {
-        top: -16px;
-        transition: 0.3s ease;
-
-    }
-
-    .nav-items {
-        display: flex;
-        flex-direction: column;
-        text-align:center;
-        list-style-type: none;
-    }
-
-    .nav-items li {
-        text-transform: uppercase;
-        font-family: 'Segoe UI', sans-serif;
-        padding: 10px;
-        margin-left: 10px;
-        background-color: rgba(0,0,0,.80)
-         
-    }
-    .mobile-nav a {color: white;}
-
-    .mobile-nav a:hover {
-        color: rgba(0,0,0,.85);
-        background-color: #Fbfbfb;
-    }
-    .mobile-nav li:hover {
-        color: rgba(0,0,0,.85);
-        background-color: #Fbfbfb;
-
-    }
-
-
-
-    /* Hamburger menu */
-    .menu-container {
-        display: inline-block;
-        cursor: pointer;
-        position: fixed;
-        top: 12px;
-        /* left: 80vw; */
-        right: 15px;
-        z-index: 12;
-      }
-      
-      .bar1, .bar2, .bar3 {
-        width: 35px;
-        height: 5px;
-        background-color: white;
-        margin: 6px 0;
-        transition: 0.4s;
-        border-top: 1px solid rgba(0,0,0,.5);
-        border-left: 1px solid rgba(0,0,0,.5);
-        box-shadow: 2px 2px 2px rgba(0,0,0,.5);
-      }
-      
-      /* Rotate first bar */
-      .change .bar1 {
-        -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-        transform: rotate(-45deg) translate(-9px, 6px) ;
-      }
-      
-      /* Fade out the second bar */
-      .change .bar2 {
-        opacity: 0;
-      }
-      
-      /* Rotate last bar */
-      .change .bar3 {
-        -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-        transform: rotate(45deg) translate(-8px, -8px) ;
-      }
-}
 /* Not needed on paper */
 @media print {
   #menu-bars, .mobile-nav, .sidebar-container { display: none !important; }

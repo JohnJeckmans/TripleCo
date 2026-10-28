@@ -1,4 +1,5 @@
-<!-- Hamburger menu -->
+@let nav = t().nav;
+<!-- Hamburger menu (phones and tablets) -->
 <button
   type="button"
   class="menu-container"
@@ -6,27 +7,26 @@
   [class.change]="mobileOpen()"
   [attr.aria-expanded]="mobileOpen()"
   aria-controls="mobile-nav"
-  [attr.aria-label]="t().nav.menu"
+  [attr.aria-label]="nav.menu"
   (click)="toggleMobile()"
 >
-  <div class="bar1"></div>
-  <div class="bar2"></div>
-  <div class="bar3"></div>
+  <span class="bar1"></span>
+  <span class="bar2"></span>
+  <span class="bar3"></span>
 </button>
 
-<!-- Mobile Navigation -->
-<nav class="mobile-nav" id="mobile-nav" [class.nav-expand]="mobileOpen()">
+<!-- Mobile Navigation: hidden from keyboard and screen readers while closed -->
+<nav class="mobile-nav" id="mobile-nav" [class.nav-expand]="mobileOpen()" [attr.inert]="mobileOpen() ? null : ''">
   <ul class="nav-items">
-    <li style="padding-top: 48px"></li>
-    <li><a href="#home" (click)="toggleMobile()">{{ t().nav.home }}</a></li>
-    <li><a href="#about" (click)="toggleMobile()">{{ t().nav.about }}</a></li>
-    <li><a href="#services" (click)="toggleMobile()">{{ t().nav.services }}</a></li>
-    <li><a href="#experience" (click)="toggleMobile()">{{ t().nav.experience }}</a></li>
-    <li><a href="#contact" (click)="toggleMobile()">{{ t().nav.contact }}</a></li>
+    @for (id of sections; track id) {
+      <li>
+        <a [href]="'#' + id" [class.active]="active() === id" [attr.aria-current]="active() === id ? 'location' : null" (click)="toggleMobile()">{{ nav[id] }}</a>
+      </li>
+    }
   </ul>
 </nav>
 
-<!-- Desktop Navigation -->
+<!-- Desktop Navigation: opens on hover, or with the keyboard via the Menu button -->
 <nav
   class="sidebar-container"
   (mouseenter)="sidebarOpen.set(true)"
@@ -34,12 +34,14 @@
   (focusin)="sidebarOpen.set(true)"
   (focusout)="sidebarOpen.set(false)"
 >
-  <p class="sidebar-toggle" id="sidebar-toggle" [class.display-none]="sidebarOpen()">{{ t().nav.menu }}</p>
+  <button type="button" class="sidebar-toggle" id="sidebar-toggle" [attr.aria-expanded]="sidebarOpen()" aria-controls="desktop-nav">
+    <span class="bars" aria-hidden="true"></span>{{ nav.menu }}
+  </button>
   <ul class="sidebar-items desktop-nav" id="desktop-nav" [class.display-none]="!sidebarOpen()">
-    <li><a href="#home">{{ t().nav.home }}</a></li>
-    <li><a href="#about">{{ t().nav.about }}</a></li>
-    <li><a href="#services">{{ t().nav.services }}</a></li>
-    <li><a href="#experience">{{ t().nav.experience }}</a></li>
-    <li><a href="#contact">{{ t().nav.contact }}</a></li>
+    @for (id of sections; track id) {
+      <li>
+        <a [href]="'#' + id" [class.active]="active() === id" [attr.aria-current]="active() === id ? 'location' : null">{{ nav[id] }}</a>
+      </li>
+    }
   </ul>
 </nav>

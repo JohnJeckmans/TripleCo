@@ -37,6 +37,27 @@ describe('NavMenu', () => {
     expect(el.querySelector('#mobile-nav')!.classList).not.toContain('nav-expand');
   });
 
+  it('closes the mobile menu with Escape and hides it from the keyboard while closed', async () => {
+    const { fixture, el } = await render();
+    const nav = el.querySelector('#mobile-nav')!;
+    expect(nav.hasAttribute('inert')).toBe(true);
+
+    el.querySelector<HTMLButtonElement>('#menu-bars')!.click();
+    await fixture.whenStable();
+    expect(nav.hasAttribute('inert')).toBe(false);
+
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape' }));
+    await fixture.whenStable();
+    expect(nav.classList).not.toContain('nav-expand');
+  });
+
+  it('opens the desktop links with the keyboard', async () => {
+    const { fixture, el } = await render();
+    el.querySelector<HTMLButtonElement>('#sidebar-toggle')!.dispatchEvent(new FocusEvent('focusin', { bubbles: true }));
+    await fixture.whenStable();
+    expect(el.querySelector('#desktop-nav')!.classList).not.toContain('display-none');
+  });
+
   it('shows the desktop links while hovering the sidebar', async () => {
     const { fixture, el } = await render();
     const sidebar = el.querySelector('.sidebar-container')!;
