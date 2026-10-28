@@ -18,7 +18,7 @@ export const en = {
   },
   hero: {
     photoAlt: 'Portrait of John Jeckmans',
-    headline: 'Board Advisor · International Industrial Leader',
+    headline: 'Board Advisor\u00A0· International Industrial Leader', // \u00A0 keeps "·" off the start of a line
     focus: 'Strategy, Transformation & Growth',
     location: 'Twente, the Netherlands · active across Europe',
     emailMe: 'Email me',

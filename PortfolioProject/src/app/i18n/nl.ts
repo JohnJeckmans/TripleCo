@@ -18,7 +18,7 @@ export const nl: Translations = {
   },
   hero: {
     photoAlt: 'Portret van John Jeckmans',
-    headline: 'Board Advisor · Internationaal industrieel leider',
+    headline: 'Board Advisor\u00A0· Internationaal industrieel leider',
     focus: 'Strategie, transformatie & groei',
     location: 'Twente, Nederland · actief in heel Europa',
     emailMe: 'Mail mij',

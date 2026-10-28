@@ -18,7 +18,7 @@ export const de: Translations = {
   },
   hero: {
     photoAlt: 'Porträt von John Jeckmans',
-    headline: 'Board Advisor · Internationale Führungskraft in der Industrie',
+    headline: 'Beirat & Unternehmensberater\u00A0· Internationale Führungskraft in der Industrie',
     focus: 'Strategie, Transformation & Wachstum',
     location: 'Twente, Niederlande · in ganz Europa tätig',
     emailMe: 'E-Mail senden',
@@ -28,9 +28,9 @@ export const de: Translations = {
   approach: {
     title: 'Ansatz',
     paragraphs: [
-      'Ich bringe internationale Führungserfahrung aus industriellen, energie- und technologiegetriebenen Umfeldern mit, mit Schwerpunkt auf Strategie, Transformation und nachhaltigem Wachstum.',
-      'Besonders wirksam bin ich, wenn Organisationen vor strategischer Komplexität, sich wandelnden Märkten, stagnierendem Wachstum stehen oder Führung, operatives Geschäft und langfristige Ausrichtung in Einklang bringen müssen.',
-      'Mit TripleCo unterstütze ich Aufsichtsgremien, Eigentümer und Führungsteams, die erfahrenes Urteilsvermögen in Fragen von Wachstum, Transformation, Governance und strategischer Ausrichtung brauchen.',
+      'Ich bringe internationale Führungserfahrung aus industriellen, energie- und technologiegetriebenen Branchen mit – mit klarem Fokus auf Strategie, Transformation und nachhaltiges Wachstum.',
+      'Meine Stärke liegt dort, wo Organisationen vor strategischer Komplexität, veränderten Marktbedingungen oder stagnierendem Wachstum stehen, oder wo es darum geht, Führung, operatives Geschäft und langfristige Ausrichtung nahtlos miteinander zu verknüpfen.',
+      'Über TripleCo unterstütze ich Beiräte, Gesellschafter und Führungsteams, die ein fundiertes Urteilsvermögen in Fragen von Wachstum, Transformation, Governance und strategischer Ausrichtung schätzen.',
     ],
     quote: 'Klarheit statt Komplexität, Substanz statt Rhetorik, Ergebnisse statt Präsentation.',
   },
@@ -39,20 +39,20 @@ export const de: Translations = {
     intro: 'Langfristige Ausrichtung mit praktischer Umsetzung und nachhaltiger Leistungsverbesserung verbinden.',
     items: [
       {
-        title: 'Beratung von Aufsichtsgremien & Governance',
-        text: 'Erfahrenes Urteil zu strategischer Ausrichtung, Entscheidungsqualität und Verantwortlichkeit, aufbauend auf Gremien- und Venture-Capital-Mandaten.',
+        title: 'Beirat & Governance',
+        text: 'Fundiertes Urteilsvermögen zu strategischer Ausrichtung, Entscheidungsqualität und Rechenschaftspflicht – gestützt auf langjährige Gremien- und Venture-Capital-Mandate.',
       },
       {
         title: 'Strategie & Transformation',
-        text: 'Turnaround, Neupositionierung und Wandel: strategische Ambition in strukturierte Umsetzung übersetzen.',
+        text: 'Turnaround, Neupositionierung und Wandel: strategische Ambitionen in eine strukturierte Umsetzung übersetzen.',
       },
       {
         title: 'Wachstum & Geschäftsentwicklung',
         text: 'Internationale Geschäftsentwicklung, Allianzen und die Kommerzialisierung neuer Technologien.',
       },
       {
-        title: 'Führung in Einklang bringen',
-        text: 'Führung, operatives Geschäft und Stakeholder über Organisationen, Disziplinen und Ländergrenzen hinweg in Einklang bringen.',
+        title: 'Leadership Alignment',
+        text: 'Führung, operatives Geschäft und Stakeholder über Organisationen, Disziplinen und Ländergrenzen hinweg harmonisieren.',
       },
     ],
   },
@@ -64,28 +64,28 @@ export const de: Translations = {
         org: 'KMTC Technologies Holding GmbH',
         period: '2022 – heute',
         place: 'Fellbach, Deutschland',
-        text: 'Leitung internationaler Technologie- und Industrieentwicklungsprogramme, darunter das Vortifer-Antriebsprogramm mit akademischen und industriellen Partnern.',
+        text: 'Leitung internationaler Technologie- und Industrieentwicklungsprogramme, darunter das Vortifer-Antriebsprogramm in Zusammenarbeit mit akademischen und industriellen Partnern.',
       },
       {
         role: 'Gründer & Inhaber',
         org: 'TripleCo',
         period: '2004 – heute',
         place: 'Europa',
-        text: 'Unabhängige Plattform für strategische Beratung, Geschäftsentwicklung und Transformationsbegleitung in industriellen und wachstumsorientierten Umfeldern.',
+        text: 'Unabhängige Plattform für strategische Beratung, Business Development und Transformationsbegleitung in industriellen und wachstumsorientierten Umfeldern.',
       },
       {
         role: 'Regional Director',
         org: 'The Alpha Group International',
         period: '2014 – 2021',
         place: 'Niederlande, Belgien, Luxemburg, Deutschland',
-        text: 'Leitung von Peer-Advisory-Gruppen für CEOs und Unternehmer zu Skalierung, Profitabilität, Führung und Unternehmensausrichtung.',
+        text: 'Moderation und Leitung von Peer-Advisory-Gruppen für CEOs und Unternehmer mit Fokus auf Skalierung, Profitabilität, Leadership Alignment und strategische Ausrichtung.',
       },
       {
         role: 'Partner',
         org: 'Dutch Executive Search',
         period: '2011 – 2018',
         place: 'Niederlande',
-        text: 'Rekrutierung von Führungskräften mit Fokus auf Führungskräftebeurteilung, Nachfolge und passende Besetzung.',
+        text: 'Besetzung von Führungspositionen (Executive Search) mit Schwerpunkt auf Leadership Assessments, Nachfolgeplanung und passgenauer Integration (Executive Fit).',
       },
       {
         role: 'CEO',
@@ -120,7 +120,7 @@ export const de: Translations = {
   },
   contact: {
     title: 'Kontakt',
-    text: 'Möchten Sie etwas in Bewegung setzen? Sprechen wir darüber.',
+    text: 'Bereit, etwas zu bewegen? Sprechen wir darüber.',
     email: 'E-Mail',
     saveContactHint: 'Speichert meine Daten in Ihrem Telefon oder Adressbuch.',
     follow: 'Folgen Sie mir',
