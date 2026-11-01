@@ -59,6 +59,13 @@ describe('App (business card page)', () => {
     expect(page.textContent).not.toContain('0638619522');
   });
 
+  it('mutes the background video so browsers allow it to autoplay', async () => {
+    const { page } = await render();
+    const video = page.querySelector<HTMLVideoElement>('.hero-video')!;
+    expect(video.muted).toBe(true);
+    expect(video.loop).toBe(true);
+  });
+
   it('shows the current year in the footer', async () => {
     const { page } = await render();
     expect(page.querySelector('.footer')?.textContent).toContain(String(new Date().getFullYear()));
